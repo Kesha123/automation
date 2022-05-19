@@ -1,8 +1,10 @@
 __pycache__/
 bin/
 include/
-lib/
+lib
 lib64
 geckodriver
 geckodriver.log
-pyvenv.cfg
+*.cfg
+*.json
+Pipfile

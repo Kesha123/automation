@@ -1,5 +1,5 @@
-from Palette import ToolBar
-from Bench import Bench
+from Palette.Palette import ToolBar
+from Catalog.Items.Bench import Bench
 from selenium import webdriver
 
 
