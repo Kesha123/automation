@@ -4,6 +4,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 from enum import Enum
 
+from selenium.webdriver.common.by import By
+
 class ToolBarList(Enum):
     NEW_PROJECT = ".toolbar > div:nth-child(1)"
     SAVE_PROJECT = ".toolbar > div:nth-child(2)"
@@ -24,7 +26,9 @@ class SideBarList(Enum):
     GROUPS = ".sidebar > div:nth-child(4)"
     PROPERTIES = ".sidebar > div:nth-child(5)"
 
-    PROPERTIES_BODY = "div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(1)"
+    PROPERTIES_BODY = "div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1)"
+    MAIN_PROPERTIES_BODY = "div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(1)"
+    
 
 class ToolBar:
     @staticmethod
@@ -47,6 +51,10 @@ class ToolBar:
 
         PATH = os.path.expanduser("~")
         os.replace(f"{PATH}/Загрузки/{project_name}.json", f"{path}/{project_name}.json")
+
+    @staticmethod
+    def load_project(driver, path: str) -> None:
+        pass
 
 
 class SideBar:

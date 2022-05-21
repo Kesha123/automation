@@ -2,6 +2,10 @@ from Palette.Palette import ToolBar
 from Palette.Layer import Layer
 from Palette.Palette import SideBar, SideBarList
 
+
+#from selenium import webdriver
+#driver = webdriver.Firefox()
+
 class Item:
     __count_items: int = 0
     count_Ids: int = 1
@@ -18,44 +22,50 @@ class Item:
 
     def self_choose(self, driver) -> None:
         SideBar.open_elements_on_layer(driver)
-        link = f"{SideBarList.LAYOUT_ELEMENTS.value} > div:nth-child(2) > div:nth-child(1) > div:nth-child({SideBar.count_sidebar_groups_rows(driver)}) > div:nth-child({self.id})"
+        link = f"{SideBarList.LAYOUT_ELEMENTS.value} > div:nth-child(2) > div:nth-child(1) > div:nth-child({SideBar.get_items_row(driver)}) > div:nth-child({self.id})"
         button = driver.find_element_by_css_selector(link)
         button.click()
 
     
+    def extra_properties(self, driver, **kwargs) -> None:
+        #measurement_properties = driver.find_element_by_css_selector(f"{SideBarList.PROPERTIES.value} > {SideBarList.PROPERTIES_BODY.value}").find_elements_by_class_name("PropertyLengthMeasure")
+        #color_properties = driver.find_element_by_css_selector(f"{SideBarList.PROPERTIES.value} > {SideBarList.PROPERTIES_BODY.value}").find_elements_by_class_name("PropertyColor")
+        pass
+
+    
     def set_properties(self, driver) -> None:
-        name = driver.find_element_by_css_selector(f"{SideBarList.PROPERTIES.value} > {SideBarList.PROPERTIES_BODY.value} > tr:nth-child(1) > td:nth-child(2) > input:nth-child(1)")
+        name = driver.find_element_by_css_selector(f"{SideBarList.PROPERTIES.value} > {SideBarList.MAIN_PROPERTIES_BODY.value} > tr:nth-child(1) > td:nth-child(2) > input:nth-child(1)")
         name.clear()
         name.send_keys(self.name)
 
-        x = driver.find_element_by_css_selector(f"{SideBarList.PROPERTIES.value} > {SideBarList.PROPERTIES_BODY.value} > tr:nth-child(2) > td:nth-child(2) > div:nth-child(1) > input:nth-child(1)")
+        x = driver.find_element_by_css_selector(f"{SideBarList.PROPERTIES.value} > {SideBarList.MAIN_PROPERTIES_BODY.value} > tr:nth-child(2) > td:nth-child(2) > div:nth-child(1) > input:nth-child(1)")
         x.clear()                              
         x.send_keys(self.x)                    
 
-        y = driver.find_element_by_css_selector(f"{SideBarList.PROPERTIES.value} > {SideBarList.PROPERTIES_BODY.value} > tr:nth-child(3) > td:nth-child(2) > div:nth-child(1) > input:nth-child(1)")
+        y = driver.find_element_by_css_selector(f"{SideBarList.PROPERTIES.value} > {SideBarList.MAIN_PROPERTIES_BODY.value} > tr:nth-child(3) > td:nth-child(2) > div:nth-child(1) > input:nth-child(1)")
         y.clear()
         y.send_keys(self.y)
 
-        rotation = driver.find_element_by_css_selector(f"{SideBarList.PROPERTIES.value} > {SideBarList.PROPERTIES_BODY.value} > tr:nth-child(4) > td:nth-child(2) > div:nth-child(1) > input:nth-child(1)")
+        rotation = driver.find_element_by_css_selector(f"{SideBarList.PROPERTIES.value} > {SideBarList.MAIN_PROPERTIES_BODY.value} > tr:nth-child(4) > td:nth-child(2) > div:nth-child(1) > input:nth-child(1)")
         rotation.clear()
         rotation.send_keys(self.rotation)
 
-        button_x = driver.find_element_by_css_selector(f"{SideBarList.PROPERTIES.value} > {SideBarList.PROPERTIES_BODY.value} > tr:nth-child(2) > td:nth-child(2) > div:nth-child(1) > div:nth-child(2)")
+        button_x = driver.find_element_by_css_selector(f"{SideBarList.PROPERTIES.value} > {SideBarList.MAIN_PROPERTIES_BODY.value} > tr:nth-child(2) > td:nth-child(2) > div:nth-child(1) > div:nth-child(2)")
         button_x.click()
         
-        button_y = driver.find_element_by_css_selector(f"{SideBarList.PROPERTIES.value} > {SideBarList.PROPERTIES_BODY.value} > tr:nth-child(3) > td:nth-child(2) > div:nth-child(1) > div:nth-child(2)")
+        button_y = driver.find_element_by_css_selector(f"{SideBarList.PROPERTIES.value} > {SideBarList.MAIN_PROPERTIES_BODY.value} > tr:nth-child(3) > td:nth-child(2) > div:nth-child(1) > div:nth-child(2)")
         button_y.click()
         
-        button_rotation = driver.find_element_by_css_selector(f"{SideBarList.PROPERTIES.value} > {SideBarList.PROPERTIES_BODY.value} > tr:nth-child(4) > td:nth-child(2) > div:nth-child(1) > div:nth-child(2)")
+        button_rotation = driver.find_element_by_css_selector(f"{SideBarList.PROPERTIES.value} > {SideBarList.MAIN_PROPERTIES_BODY.value} > tr:nth-child(4) > td:nth-child(2) > div:nth-child(1) > div:nth-child(2)")
         button_rotation.click()
 
-    def place_bench(self, driver):
+
+    def place_item(self, driver):
         ToolBar.open_catalog(driver)
         Item.add_object(driver, self.link)
         Item.insert_object_on_layer(driver)
         self.self_choose(driver)
         self.set_properties(driver)
-
 
     @staticmethod
     def insert_object_on_layer(driver) -> None:
