@@ -65,7 +65,6 @@ class Item:
         Item.add_object(driver, self.link)
         Item.insert_object_on_layer(driver)
         self.self_choose(driver)
-        self.set_properties(driver)
 
     @staticmethod
     def insert_object_on_layer(driver) -> None:
