@@ -30,4 +30,4 @@ class Bench(Item):
 
 
     def __str__(self) -> str:
-        return str(dict([("X", self.x), ("Y", self.y), ("Rotation", self.rotation), ("Id", self.id)]))
+        return str(dict([("X", self.x), ("Y", self.y), ("Rotation", self.rotation), ("Id", self.id), self.extra_properties]))

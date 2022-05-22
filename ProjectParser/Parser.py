@@ -4,11 +4,12 @@ from Catalog.Items.Bench import Bench
 
 class Parser:
 
-    def __init__(self, project_path: str = "Project1.json") -> None:
+    def __init__(self, project_path: str) -> None:
         self.name = project_path
         self.layers = {}
         self.holes = []
         self.lines = []
+        self.set_layers()
 
     def parse_project(self):
         with open(self.name, "r") as project:
@@ -24,24 +25,24 @@ class Parser:
         return self.parse_project()["layers"]
 
     def get_items(self):
-        items = []
         for layer in self.get_layers().items():
+            items = []
             layer_name = layer[0]
             layer_items = list(layer[1].get("items").items())
 
             for index, item in enumerate(layer_items):
                 properties = item[1].get("properties")
-                name = properties.get("name")
+                name = item[1].get("name")
                 altitude = properties.get("altitude")
-                x = properties.get("x")
-                y = properties.get("y")
-                rotation = properties.get("rotation")
+                x = item[1].get("x")
+                y = item[1].get("y")
+                rotation = item[1].get("rotation")
 
                 match item[1].get("type"):
                     case "bench":
-                        bench = Bench(x,y,rotation,name,altitude)
-                        self.items.append(bench)
-
+                        bench = Bench(x,y,rotation,name,Alitude=altitude)
+                        items.append(bench)
+            
             self.layers[layer_name]["items"] = items
 
 
@@ -50,11 +51,9 @@ class Parser:
 
     def get_holes(self):
         pass
-        
 
-
-p = Parser()
-p.get_items()
-
-for index, item in enumerate(p.layers):
-    print(item)
+    def load_project(self):
+        self.get_items()
+        self.get_lines()
+        self.get_holes()
+        return self.layers
