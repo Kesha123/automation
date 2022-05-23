@@ -2,6 +2,8 @@ from Palette.ToolBar import ToolBar
 from Catalog.Items.Bench import Bench
 from selenium import webdriver
 
+from ProjectParser.Parser import Parser
+
 from Catalog.Lines.Wall import Wall
 
 
@@ -26,8 +28,14 @@ def lines():
     ToolBar().save_project(driver)
 
 
+def load():
+    parser = Parser("Project1.json").load_project()
+    print(parser)
+    ToolBar.load_project(driver, parser)
+
+
 if __name__ == "__main__":
-    lines()
+    #lines()
     #items()
-    #parser = ToolBar.load_project(driver, "Project1.json")
+    load()
     

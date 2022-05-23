@@ -77,7 +77,6 @@ class Item:
 
 
 class ItemSelectorList(Enum):
-    CATALOG = ".toolbar > div:nth-child(4)"
     NAME_SELCTOR = "tr:nth-child(1) > td:nth-child(2) > input:nth-child(1)"
     X_SELECTOR = "tr:nth-child(2) > td:nth-child(2) > div:nth-child(1) > input:nth-child(1)"
     Y_SELECTOR = "tr:nth-child(3) > td:nth-child(2) > div:nth-child(1) > input:nth-child(1)"

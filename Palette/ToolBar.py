@@ -1,6 +1,5 @@
 import os
 from enum import Enum
-#from ProjectParser.Parser import Parser
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.common.exceptions import TimeoutException
@@ -41,13 +40,7 @@ class ToolBar:
         PATH = os.path.expanduser("~")
         os.replace(f"{PATH}/Загрузки/{project_name}.json", f"{path}/{project_name}.json")
 
-    """
+
     @staticmethod
-    def load_project(driver, path: str = "Project.json") -> None:
-        parser = Parser(path).load_project().items()
-    
-        for layer in parser:
-            items = layer[1].get("items")
-            for item in items:
-               item.place_item(driver)
-    """
+    def load_project(driver, parser) -> None:
+        pass
