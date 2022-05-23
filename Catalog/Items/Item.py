@@ -85,4 +85,3 @@ class ItemSelectorList(Enum):
     BUTTON_X_SELECTOR = "tr:nth-child(2) > td:nth-child(2) > div:nth-child(1) > div:nth-child(2)"
     BUTTON_Y_SELECTOR = "tr:nth-child(3) > td:nth-child(2) > div:nth-child(1) > div:nth-child(2)"
     BUTTON_ROTATION_SELECTOR = "tr:nth-child(4) > td:nth-child(2) > div:nth-child(1) > div:nth-child(2)"
-    #.sidebar > div:nth-child(5) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(4) > td:nth-child(2) > div:nth-child(1) > div:nth-child(2)

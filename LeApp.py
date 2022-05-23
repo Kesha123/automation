@@ -20,6 +20,6 @@ def main():
 
 
 if __name__ == "__main__":
-    #main()
-    parser = ToolBar.load_project(driver, "Project1.json")
+    main()
+    #parser = ToolBar.load_project(driver, "Project1.json")
     
