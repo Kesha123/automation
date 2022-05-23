@@ -1,4 +1,4 @@
-#from Palette.ToolBar import ToolBar
+from Palette.ToolBar import ToolBar, ToolBarList
 from enum import Enum
 from Palette.Layer import Layer
 from Palette.SideBar import SideBar, SideBarList
@@ -25,37 +25,37 @@ class Item:
         button.click()
     
     def set_properties(self, driver) -> None:
-        name = driver.find_element_by_css_selector(f"{SideBarList.PROPERTIES.value} > {SideBarList.MAIN_PROPERTIES_BODY.value} > {ItemSelectorList.NAME_SELCTOR.value}")
+        name = driver.find_element_by_css_selector(f"{SideBarList.PROPERTIES.value} > {SideBarList.ITEM_MAIN_PROPERTIES_BODY.value} > {ItemSelectorList.NAME_SELCTOR.value}")
         name.clear()
         name.send_keys(self.name)
 
-        x = driver.find_element_by_css_selector(f"{SideBarList.PROPERTIES.value} > {SideBarList.MAIN_PROPERTIES_BODY.value} > {ItemSelectorList.X_SELECTOR.value}")
+        x = driver.find_element_by_css_selector(f"{SideBarList.PROPERTIES.value} > {SideBarList.ITEM_MAIN_PROPERTIES_BODY.value} > {ItemSelectorList.X_SELECTOR.value}")
         x.clear()                             
         x.send_keys(0)                    
 
-        y = driver.find_element_by_css_selector(f"{SideBarList.PROPERTIES.value} > {SideBarList.MAIN_PROPERTIES_BODY.value} > {ItemSelectorList.Y_SELECTOR.value}")
+        y = driver.find_element_by_css_selector(f"{SideBarList.PROPERTIES.value} > {SideBarList.ITEM_MAIN_PROPERTIES_BODY.value} > {ItemSelectorList.Y_SELECTOR.value}")
         y.clear()
         y.send_keys(0)
 
-        rotation = driver.find_element_by_css_selector(f"{SideBarList.PROPERTIES.value} > {SideBarList.MAIN_PROPERTIES_BODY.value} > {ItemSelectorList.ROTATION_SELECTOR.value}")
+        rotation = driver.find_element_by_css_selector(f"{SideBarList.PROPERTIES.value} > {SideBarList.ITEM_MAIN_PROPERTIES_BODY.value} > {ItemSelectorList.ROTATION_SELECTOR.value}")
         rotation.clear()
         rotation.send_keys(self.rotation)
 
-        button_x = driver.find_element_by_css_selector(f"{SideBarList.PROPERTIES.value} > {SideBarList.MAIN_PROPERTIES_BODY.value} > {ItemSelectorList.BUTTON_X_SELECTOR.value}")
+        button_x = driver.find_element_by_css_selector(f"{SideBarList.PROPERTIES.value} > {SideBarList.ITEM_MAIN_PROPERTIES_BODY.value} > {ItemSelectorList.BUTTON_X_SELECTOR.value}")
         if button_x.is_displayed():
             button_x.click()
         
-        button_y = driver.find_element_by_css_selector(f"{SideBarList.PROPERTIES.value} > {SideBarList.MAIN_PROPERTIES_BODY.value} > {ItemSelectorList.BUTTON_Y_SELECTOR.value}")
+        button_y = driver.find_element_by_css_selector(f"{SideBarList.PROPERTIES.value} > {SideBarList.ITEM_MAIN_PROPERTIES_BODY.value} > {ItemSelectorList.BUTTON_Y_SELECTOR.value}")
         if button_y.is_displayed():
             button_y.click()
         
-        button_rotation = driver.find_element_by_css_selector(f"{SideBarList.PROPERTIES.value} > {SideBarList.MAIN_PROPERTIES_BODY.value} > {ItemSelectorList.BUTTON_ROTATION_SELECTOR.value}")
+        button_rotation = driver.find_element_by_css_selector(f"{SideBarList.PROPERTIES.value} > {SideBarList.ITEM_MAIN_PROPERTIES_BODY.value} > {ItemSelectorList.BUTTON_ROTATION_SELECTOR.value}")
         if button_rotation.is_displayed():
             button_rotation.click()
 
 
     def place_item(self, driver):
-        Item.open_catalog(driver)
+        ToolBar.open_catalog(driver)
         Item.add_object(driver, self.link)
         Item.insert_object_on_layer(driver)
         self.self_choose(driver)
@@ -72,7 +72,7 @@ class Item:
 
     @staticmethod
     def open_catalog(driver) -> None:
-        catalog = driver.find_element_by_css_selector(ItemSelectorList.CATALOG.value)
+        catalog = driver.find_element_by_css_selector(ToolBarList.CATALOG.value)
         catalog.click()
 
 

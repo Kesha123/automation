@@ -9,8 +9,9 @@ class SideBarList(Enum):
     PROPERTIES = ".sidebar > div:nth-child(5)"
 
     PROPERTIES_BODY = "div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1)"
-    MAIN_PROPERTIES_BODY = "div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(1)"
-    
+    ITEM_MAIN_PROPERTIES_BODY = "div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(1)"
+    LINE_MAIN_PROPERTIES_BODY = "div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(1)"
+   
 
 class SideBar:
     @staticmethod

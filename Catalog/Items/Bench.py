@@ -1,6 +1,7 @@
 from enum import Enum
-from Catalogue import Catalogue
+from Catalog.Catalogue import Catalogue
 from Catalog.Items.Item import Item
+from Catalog.Lines.Line import Line
 from selenium.webdriver.support.ui import Select
 
 
@@ -11,7 +12,7 @@ class Bench(Item):
     def __init__(self, x: float = 500, y: float = 1500, rotation: float = 45, name: str = "bench", **kwargs) -> None:
         super().__init__(x, y, name, rotation)
         self.extra_properties = kwargs
-        self.link =  f"{Catalogue.CATALOG.value} > {Catalogue.BENCH.value}" if self.id == 2 else f"{Catalogue.CATALOG_ALTER.value} > {Catalogue.BENCH.value}"
+        self.link =  f"{Catalogue.CATALOG.value} > {Catalogue.BENCH.value}" if (Item.count_Ids == 2 or Line.count_Ids == 2) else f"{Catalogue.CATALOG_ALTER.value} > {Catalogue.BENCH.value}"
 
     def set_properties(self, driver) -> None:
         super().set_properties(driver)
@@ -29,7 +30,6 @@ class Bench(Item):
     def place_item(self, driver):
         super().place_item(driver)
         self.set_properties(driver)
-
 
     def __str__(self) -> str:
         return str(dict([("X", self.x), ("Y", self.y), ("Rotation", self.rotation), ("Id", self.id), self.extra_properties]))
