@@ -23,7 +23,7 @@ def items():
 
 
 def lines():
-    wall = Wall("Line 1",603.12,1694.03,1110.95,1694.03,{'length': 507.83, 'unit': 'cm'})
+    wall = Wall("Line 1",300,1700,1000,1700,{'length': 700, 'unit': 'cm'}, height={"length":999,"_length":999,"_unit":"cm"}, thickness={"length":50,"_length":50,"_unit":"cm"}, textureA="Painted")
     wall.place_line(driver)
     ToolBar().save_project(driver)
 
@@ -35,7 +35,7 @@ def load():
 
 
 if __name__ == "__main__":
-    #lines()
+    lines()
     #items()
-    load()
+    #load()
     

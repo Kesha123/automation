@@ -90,8 +90,7 @@ class Line:
     def insert_line_on_layer(driver: webdriver.Firefox) -> None:
         element = driver.find_element_by_css_selector(Layer().link)
         element.click()
-        ActionChains(driver).move_by_offset(100,100).click().perform()
-        
+        ActionChains(driver).move_by_offset(100,100).click().perform()        
 
     @staticmethod
     def add_line(driver, link) -> None:
