@@ -18,14 +18,18 @@ def items():
     bench1.place_item(driver)
 
     bench2 = Bench(0,100,90,"bench2")    
-    bench2.place_item(driver)    
-
-    ToolBar().save_project(driver)
+    bench2.place_item(driver)
+    ToolBar.save_project(driver)
 
 
 def lines():
     wall = Wall("Line 1",300,1700,1000,1700,{'length': 700, 'unit': 'cm'}, height={"length":999,"_length":999,"_unit":"cm"}, thickness={"length":50,"_length":50,"_unit":"cm"}, textureA="Painted")
     wall.place_line(driver)
+
+    wall1 = Wall("Line 1",100,1000,800,1000,{'length': 700, 'unit': 'cm'}, height={"length":999,"_length":999,"_unit":"cm"}, thickness={"length":50,"_length":50,"_unit":"cm"}, textureA="Painted")
+    wall1.place_line(driver)
+
+    
 
 
 def holes():

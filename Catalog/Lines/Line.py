@@ -2,8 +2,7 @@ from enum import Enum
 from Palette.SideBar import SideBar, SideBarList
 from Palette.ToolBar import ToolBar, ToolBarList
 from Palette.Layer import Layer
-
-from selenium.webdriver.support.ui import Select
+from Palette.Properties import FieldProperty, SubbmitProperty, LengthProperty
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium import webdriver
 
@@ -39,53 +38,12 @@ class Line:
         self.self_choose(driver)
 
     def set_properties(self, driver):
-        name = driver.find_element_by_css_selector(f"{SideBarList.PROPERTIES.value} > {SideBarList.LINE_MAIN_PROPERTIES_BODY.value} > {LineSelectorList.NAME.value}")
-        name.clear()
-        name.send_keys(self.name)
-
-        x1 = driver.find_element_by_css_selector(f"{SideBarList.PROPERTIES.value} > {SideBarList.LINE_MAIN_PROPERTIES_BODY.value} > {LineSelectorList.X1.value}")
-        x1.clear()
-        x1.send_keys(self.x1)
-        
-        y1 = driver.find_element_by_css_selector(f"{SideBarList.PROPERTIES.value} > {SideBarList.LINE_MAIN_PROPERTIES_BODY.value} > {LineSelectorList.Y1.value}")
-        y1.clear()
-        y1.send_keys(self.y1)
-        
-        x2 = driver.find_element_by_css_selector(f"{SideBarList.PROPERTIES.value} > {SideBarList.LINE_MAIN_PROPERTIES_BODY.value} > {LineSelectorList.X2.value}")
-        x2.clear()
-        x2.send_keys(self.x2)
-        
-        y2 = driver.find_element_by_css_selector(f"{SideBarList.PROPERTIES.value} > {SideBarList.LINE_MAIN_PROPERTIES_BODY.value} > {LineSelectorList.Y2.value}")
-        y2.clear()
-        y2.send_keys(self.y2)
-        
-        length = driver.find_element_by_css_selector(LineSelectorList.LENGTH.value)
-        length.clear()
-        length.send_keys(self.length.get("length"))
-
-        measurement = Select(driver.find_element_by_css_selector(LineSelectorList.MEASUREMENT.value))
-        measurement.select_by_visible_text(self.length.get("unit"))
-
-        button_x1 = driver.find_element_by_css_selector(f"{SideBarList.PROPERTIES.value} > {SideBarList.LINE_MAIN_PROPERTIES_BODY.value} > {LineSelectorList.BUTTON_X1.value}")
-        if button_x1.is_displayed():
-            button_x1.click()
-
-        button_y1 = driver.find_element_by_css_selector(f"{SideBarList.PROPERTIES.value} > {SideBarList.LINE_MAIN_PROPERTIES_BODY.value} > {LineSelectorList.BUTTON_Y1.value}")
-        if button_y1.is_displayed():
-            button_y1.click()
-
-        button_x2 = driver.find_element_by_css_selector(f"{SideBarList.PROPERTIES.value} > {SideBarList.LINE_MAIN_PROPERTIES_BODY.value} > {LineSelectorList.BUTTON_X2.value}")
-        if button_x2.is_displayed():
-            button_x2.click()
-
-        button_y2 = driver.find_element_by_css_selector(f"{SideBarList.PROPERTIES.value} > {SideBarList.LINE_MAIN_PROPERTIES_BODY.value} > {LineSelectorList.BUTTON_Y2.value}")
-        if button_y2.is_displayed():
-            button_y2.click()
-
-        button_length = driver.find_element_by_css_selector(LineSelectorList.BUTTON_LENGTH.value)
-        if button_length.is_displayed():
-            button_length.click()
-
+        name = FieldProperty("name",f"{SideBarList.PROPERTIES.value} > {SideBarList.LINE_MAIN_PROPERTIES_BODY.value} > {LineSelectorList.NAME.value}",self.name).set_property(driver)
+        x1 = SubbmitProperty("x1",f"{SideBarList.PROPERTIES.value} > {SideBarList.LINE_MAIN_PROPERTIES_BODY.value} > {LineSelectorList.X1.value}",self.x1).set_property(driver)
+        y1 = SubbmitProperty("y1",f"{SideBarList.PROPERTIES.value} > {SideBarList.LINE_MAIN_PROPERTIES_BODY.value} > {LineSelectorList.Y1.value}",self.y1).set_property(driver)
+        x2 = SubbmitProperty("x2",f"{SideBarList.PROPERTIES.value} > {SideBarList.LINE_MAIN_PROPERTIES_BODY.value} > {LineSelectorList.X2.value}",self.x2).set_property(driver)
+        y2 = SubbmitProperty("y2",f"{SideBarList.PROPERTIES.value} > {SideBarList.LINE_MAIN_PROPERTIES_BODY.value} > {LineSelectorList.Y2.value}",self.y2).set_property(driver)
+        length = LengthProperty("length",f"{LineSelectorList.LENGTH.value}",self.length).set_property(driver)
 
     @staticmethod
     def insert_line_on_layer(driver: webdriver.Firefox) -> None:
@@ -106,15 +64,8 @@ class Line:
 
 class LineSelectorList(Enum):
     NAME = "tr:nth-child(1) > td:nth-child(2) > input:nth-child(1)"
-    X1 = "tr:nth-child(2) > td:nth-child(2) > div:nth-child(1) > input:nth-child(1)"
-    Y1 = "tr:nth-child(3) > td:nth-child(2) > div:nth-child(1) > input:nth-child(1)"
-    X2 = "tr:nth-child(4) > td:nth-child(2) > div:nth-child(1) > input:nth-child(1)"
-    Y2 = "tr:nth-child(5) > td:nth-child(2) > div:nth-child(1) > input:nth-child(1)"
-    LENGTH = "table.PropertyLengthMeasure:nth-child(2) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(2) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > div:nth-child(1) > input:nth-child(1)"
-    MEASUREMENT = "table.PropertyLengthMeasure:nth-child(2) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(2) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(2) > select:nth-child(1)"
-
-    BUTTON_X1 = "tr:nth-child(2) > td:nth-child(2) > div:nth-child(1) > div:nth-child(2)"
-    BUTTON_Y1 = "tr:nth-child(3) > td:nth-child(2) > div:nth-child(1) > div:nth-child(2)"
-    BUTTON_X2 = "tr:nth-child(4) > td:nth-child(2) > div:nth-child(1) > div:nth-child(2)"
-    BUTTON_Y2 = "tr:nth-child(5) > td:nth-child(2) > div:nth-child(1) > div:nth-child(2)"
-    BUTTON_LENGTH = "table.PropertyLengthMeasure:nth-child(2) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(2) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > div:nth-child(1) > div:nth-child(2)"
+    X1 = "tr:nth-child(2)"
+    Y1 = "tr:nth-child(3)"
+    X2 = "tr:nth-child(4)"
+    Y2 = "tr:nth-child(5)"
+    LENGTH = "table.PropertyLengthMeasure:nth-child(2)"
