@@ -19,7 +19,6 @@ def items():
 
     bench2 = Bench(0,100,90,"bench2")    
     bench2.place_item(driver)
-    ToolBar.save_project(driver)
 
 
 def lines():
@@ -27,9 +26,7 @@ def lines():
     wall.place_line(driver)
 
     wall1 = Wall("Line 1",100,1000,800,1000,{'length': 700, 'unit': 'cm'}, height={"length":999,"_length":999,"unit":"cm"}, thickness={"length":50,"_length":50,"unit":"cm"}, textureA="Painted")
-    wall1.place_line(driver)
-
-    
+    wall1.place_line(driver)   
 
 
 def holes():
@@ -48,7 +45,7 @@ def load():
 
 if __name__ == "__main__":
     #holes()
-    lines()
-    #items()
+    #lines()
+    items()
     #load()
     
