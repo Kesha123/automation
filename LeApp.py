@@ -5,6 +5,7 @@ from selenium import webdriver
 from ProjectParser.Parser import Parser
 
 from Catalog.Lines.Wall import Wall
+from Catalog.Holes.Gate import Gate
 
 
 driver = webdriver.Firefox()
@@ -25,7 +26,14 @@ def items():
 def lines():
     wall = Wall("Line 1",300,1700,1000,1700,{'length': 700, 'unit': 'cm'}, height={"length":999,"_length":999,"_unit":"cm"}, thickness={"length":50,"_length":50,"_unit":"cm"}, textureA="Painted")
     wall.place_line(driver)
-    ToolBar().save_project(driver)
+
+
+def holes():
+    wall = Wall("Line 1",300,1700,1000,1700,{'length': 700, 'unit': 'cm'}, height={"length":999,"_length":999,"_unit":"cm"}, thickness={"length":50,"_length":50,"_unit":"cm"}, textureA="Painted")
+    wall.place_line(driver)
+
+    gate = Gate(wall,"gate1",{'length': 10, 'unit': 'cm'},{'length': 0, 'unit': 'cm'})
+    gate.place_hole(driver)
 
 
 def load():
@@ -35,7 +43,8 @@ def load():
 
 
 if __name__ == "__main__":
-    lines()
+    holes()
+    #lines()
     #items()
     #load()
     

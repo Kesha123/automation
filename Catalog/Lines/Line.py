@@ -10,13 +10,14 @@ from selenium import webdriver
 
 class Line:
 
-    __count_lines: int = 0
+    count_lines: int = 0
     count_Ids: int = 1
 
     def __init__(self, name: str, x1: float, y1: float, x2: float, y2: float, length: dict) -> None:
-        Line.__count_lines += 1
+        Line.count_lines += 1
         Line.count_Ids += 1
         self.id = Line.count_Ids
+        self.number = Line.count_lines
         self.name = name
         self.x1 = x1
         self.y1 = y1

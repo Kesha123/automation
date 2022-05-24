@@ -34,11 +34,8 @@ class SideBar:
         return 2
 
     @staticmethod
-    def get_holes_row(driver) -> int:
-        if SideBar.count_sidebar_groups_rows(driver) < 4:
-            return None
-        else:
-            return SideBar.count_sidebar_groups_rows(driver) - 1
+    def get_holes_row() -> int:
+        return 3
 
     @staticmethod
     def get_items_row(driver) -> int:

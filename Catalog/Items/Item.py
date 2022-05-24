@@ -5,13 +5,14 @@ from Palette.SideBar import SideBar, SideBarList
 
 
 class Item:
-    __count_items: int = 0
+    count_items: int = 0
     count_Ids: int = 1
 
     def __init__(self, x, y, name, rotation) -> None:
-        Item.__count_items += 1
+        Item.count_items += 1
         Item.count_Ids += 1
         self.id = Item.count_Ids
+        self.number = Item.count_items
         self.x = x
         self.y = y
         self.rotation = rotation
