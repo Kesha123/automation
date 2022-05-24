@@ -14,7 +14,7 @@ driver.get("https://ainak.gitlab.io/leapp-app/")
 
 def items():
     
-    bench1 = Bench(Altitude={'length': 10000, 'unit': 'cm'})
+    bench1 = Bench(altitude={'length': 10000, 'unit': 'cm'})
     bench1.place_item(driver)
 
     bench2 = Bench(0,100,90,"bench2")    
@@ -23,10 +23,10 @@ def items():
 
 
 def lines():
-    wall = Wall("Line 1",300,1700,1000,1700,{'length': 700, 'unit': 'cm'}, height={"length":999,"_length":999,"_unit":"cm"}, thickness={"length":50,"_length":50,"_unit":"cm"}, textureA="Painted")
+    wall = Wall("Line 1",300,1700,1000,1700,{'length': 700, 'unit': 'cm'}, height={"length":999,"_length":999,"unit":"cm"}, thickness={"length":50,"_length":50,"unit":"cm"}, textureA="Painted")
     wall.place_line(driver)
 
-    wall1 = Wall("Line 1",100,1000,800,1000,{'length': 700, 'unit': 'cm'}, height={"length":999,"_length":999,"_unit":"cm"}, thickness={"length":50,"_length":50,"_unit":"cm"}, textureA="Painted")
+    wall1 = Wall("Line 1",100,1000,800,1000,{'length': 700, 'unit': 'cm'}, height={"length":999,"_length":999,"unit":"cm"}, thickness={"length":50,"_length":50,"unit":"cm"}, textureA="Painted")
     wall1.place_line(driver)
 
     
@@ -47,8 +47,8 @@ def load():
 
 
 if __name__ == "__main__":
-    holes()
-    #lines()
+    #holes()
+    lines()
     #items()
     #load()
     
