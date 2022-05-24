@@ -43,10 +43,13 @@ class LengthProperty(Property):
         units = Select(line.find_element_by_tag_name("select"))
         units.select_by_visible_text(self.property.get("unit"))
 
-        button = line.find_elements_by_xpath("//div[@title='Confirm']")
+        #button = line.find_elements_by_xpath("//div[@title='Confirm']")
 
-        if button[len(button)-1].is_displayed():
-            button[len(button)-1].click()
+        button = line.find_element_by_css_selector("td:nth-child(1) > div:nth-child(1) > div:nth-child(2)")
+        print(button.is_displayed())
+
+        if button.is_displayed():
+            button.click()
 
 
 class SelectProperty(Property):

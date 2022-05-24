@@ -4,6 +4,7 @@ from Palette.ToolBar import ToolBar, ToolBarList
 from Palette.Layer import Layer
 from Palette.Properties import FieldProperty, SubbmitProperty, LengthProperty
 from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.common.keys import Keys
 from selenium import webdriver
 
 
@@ -49,7 +50,7 @@ class Line:
     def insert_line_on_layer(driver: webdriver.Firefox) -> None:
         element = driver.find_element_by_css_selector(Layer().link)
         element.click()
-        ActionChains(driver).move_by_offset(100,100).click().perform()        
+        ActionChains(driver).move_by_offset(100,100).click().send_keys(Keys.ESCAPE).perform()        
 
     @staticmethod
     def add_line(driver, link) -> None:
