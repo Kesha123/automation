@@ -9,3 +9,4 @@ geckodriver.log
 *.json
 Pipfile
 SupportScripts
+*.log

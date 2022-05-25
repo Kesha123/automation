@@ -48,8 +48,8 @@ def load():
 
 if __name__ == "__main__":
     items()
-    holes()
-    lines()
+    #holes()
+    #lines()
     
     #load()
     ToolBar.save_project(driver)

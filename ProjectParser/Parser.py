@@ -47,7 +47,14 @@ class Parser:
 
 
     def get_lines(self):
-        pass
+        for layer in self.get_layers().items():
+            lines = []
+            layer_name = layer[0]
+            layer_lines = list(layer[1].get("lines").items())
+            layer_vertices = list(layer[1].get("vertices").items())
+
+            for line in layer_lines:
+                vertices = line.get("vertices")
 
     def get_holes(self):
         pass

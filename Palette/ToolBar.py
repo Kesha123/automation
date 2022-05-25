@@ -1,6 +1,7 @@
 import os
 import platform
 from enum import Enum
+from posixpath import split
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.common.exceptions import TimeoutException
@@ -31,7 +32,6 @@ class ToolBar:
     def save_project(driver, path: str =".", project_name: str = "Project") -> None:
         button = driver.find_element_by_css_selector(ToolBarList.SAVE_PROJECT.value)
         button.click()
-
         try:
             WebDriverWait(driver, 3).until(EC.alert_is_present())
             save_alert = driver.switch_to.alert
@@ -40,11 +40,13 @@ class ToolBar:
         except TimeoutException:
             pass
 
+        download = "Загрузки"
+
         match platform.system():
             case "Linux":
                 PATH = os.path.expanduser("~")
                 try:
-                    os.replace(f"{PATH}/Downloads/{project_name}.json", f"{path}/{project_name}.json")
+                    os.replace(f"{PATH}/{download}/{project_name}.json", f"{path}/{project_name}.json")
                 except FileNotFoundError as ex:
                     Logger.error(f"Error occured while saving the file:\n\t{ex}")
             case "Windows":
@@ -53,6 +55,8 @@ class ToolBar:
             case "Darwin":
                 Logger.warning(f"Saving on {platform.system()} pcs hasn't been implemented so far due to ...")
                 pass
+            case _:
+                Logger.warning("can not decet your os!")
 
     @staticmethod
     def load_project(driver, parser) -> None:

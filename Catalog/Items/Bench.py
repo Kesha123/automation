@@ -14,7 +14,7 @@ class Bench(Item):
     def __init__(self, x: float = 500, y: float = 1500, rotation: float = 45, name: str = "bench", **kwargs) -> None:
         super().__init__(x, y, name, rotation)
         self.extra_properties = kwargs
-        self.link =  f"{Catalogue.CATALOG.value} > {Catalogue.BENCH.value}" if (Counter.count == 1) else f"{Catalogue.CATALOG_ALTER.value} > {Catalogue.BENCH.value}"
+        self.link =  f"{Catalogue.CATALOG.value} > {Catalogue.BENCH.value}" if (Item.count_items + Line.count_lines == 1) else f"{Catalogue.CATALOG_ALTER.value} > {Catalogue.BENCH.value}"
 
     def set_properties(self, driver) -> None:
         super().set_properties(driver)
