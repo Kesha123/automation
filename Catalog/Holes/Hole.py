@@ -7,6 +7,8 @@ from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
 from selenium import webdriver
 
+from Logger.Logger import Logger
+
 
 class Hole:
     count_holes: int = 0
@@ -14,6 +16,7 @@ class Hole:
 
     def __init__(self, parent: Line, name: str, offset1: dict, offset2: dict, 
                 width: dict = {"length":80, "unit":"cm"}, height: dict = {"length":215, "unit":"cm"}, altitude: dict = {"length":0, "unit":"cm"}, thickness: dict = {"length":30, "unit":"cm"}) -> None:
+        Logger.info(f"{type(self)} object has been cteated")
         Hole.count_holes += 1
         Hole.count_Ids += 1
         self.id = Hole.count_Ids
@@ -59,11 +62,6 @@ class Hole:
     def add_hole(driver, link) -> None:
         object = driver.find_element_by_css_selector(link)
         object.click()
-
-    @staticmethod
-    def open_catalog(driver) -> None:
-        catalog = driver.find_element_by_css_selector(ToolBarList.CATALOG.value)
-        catalog.click()
     
 
 class HoleSelectorList(Enum):

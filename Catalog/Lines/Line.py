@@ -8,12 +8,15 @@ from selenium.webdriver.common.keys import Keys
 from selenium import webdriver
 
 
+from Logger.Logger import Logger
+
 class Line:
 
     count_lines: int = 0
     count_Ids: int = 1
 
     def __init__(self, name: str, x1: float, y1: float, x2: float, y2: float, length: dict) -> None:
+        Logger.info(f"{type(self)} object has been cteated")
         Line.count_lines += 1
         Line.count_Ids += 1
         self.id = Line.count_Ids
@@ -56,11 +59,6 @@ class Line:
     def add_line(driver, link) -> None:
         object = driver.find_element_by_css_selector(link)
         object.click()
-
-    @staticmethod
-    def open_catalog(driver) -> None:
-        catalog = driver.find_element_by_css_selector(ToolBarList.CATALOG.value)
-        catalog.click()
 
 
 class LineSelectorList(Enum):

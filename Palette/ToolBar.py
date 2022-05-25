@@ -1,8 +1,11 @@
 import os
+import platform
 from enum import Enum
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.common.exceptions import TimeoutException
+
+from Logger.Logger import Logger
 
 
 class ToolBarList(Enum):
@@ -36,6 +39,18 @@ class ToolBar:
             save_alert.accept()
         except TimeoutException:
             pass
+
+        match platform.system():
+            case "Linux":
+                PATH = os.path.expanduser("~")
+                Logger.warning(f"Saving on {platform.system()} pcs hasn't been implemented so far due to ...")
+                os.replace(f"{PATH}/Downloads/{project_name}.json", f"{path}/{project_name}.json")
+            case "Windows":
+                Logger.warning(f"Saving on {platform.system()} pcs hasn't been implemented so far due to ...")
+                pass 
+            case "Darwin":
+                Logger.warning(f"Saving on {platform.system()} pcs hasn't been implemented so far due to ...")
+                pass 
 
         PATH = os.path.expanduser("~")
         os.replace(f"{PATH}/Загрузки/{project_name}.json", f"{path}/{project_name}.json")

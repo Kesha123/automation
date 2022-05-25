@@ -1,14 +1,17 @@
-from Palette.ToolBar import ToolBar, ToolBarList
+from Palette.ToolBar import ToolBar
 from enum import Enum
 from Palette.Layer import Layer
 from Palette.SideBar import SideBar, SideBarList
 from Palette.Properties import FieldProperty, SubbmitProperty
+
+from Logger.Logger import Logger
 
 class Item:
     count_items: int = 0
     count_Ids: int = 1
 
     def __init__(self, x, y, name, rotation) -> None:
+        Logger.info(f"{type(self)} object has been cteated")
         Item.count_items += 1
         Item.count_Ids += 1
         self.id = Item.count_Ids
@@ -46,11 +49,6 @@ class Item:
     def add_object(driver, link) -> None:
         object = driver.find_element_by_css_selector(link)
         object.click()
-
-    @staticmethod
-    def open_catalog(driver) -> None:
-        catalog = driver.find_element_by_css_selector(ToolBarList.CATALOG.value)
-        catalog.click()
 
 
 class ItemSelectorList(Enum):

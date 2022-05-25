@@ -1,8 +1,10 @@
 from enum import Enum
+from Logger.Logger import Logger
 from Catalog.Catalogue import Catalogue
 from Catalog.Items.Item import Item
 from Catalog.Lines.Line import Line
 from Palette.Properties import LengthProperty
+
 
 
 class Bench(Item):

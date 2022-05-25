@@ -15,10 +15,12 @@ driver.get("https://ainak.gitlab.io/leapp-app/")
 def items():
     
     bench1 = Bench(altitude={'length': 10000, 'unit': 'cm'})
-    bench1.place_item(driver)
+    #bench1.place_item(driver)
 
     bench2 = Bench(0,100,90,"bench2")    
-    bench2.place_item(driver)
+    #bench2.place_item(driver)
+
+    #ToolBar.save_project(driver)
 
 
 def lines():
@@ -47,8 +49,8 @@ def load():
 
 
 if __name__ == "__main__":
-    holes()
+    #holes()
     #lines()
-    #items()
+    items()
     #load()
     
