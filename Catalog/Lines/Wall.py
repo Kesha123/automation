@@ -2,14 +2,16 @@ from enum import Enum
 from Catalog.Catalogue import Catalogue
 from Catalog.Lines.Line import Line
 from Catalog.Items.Item import Item
-from selenium.webdriver.support.ui import Select
 from Palette.Properties import LengthProperty, SelectProperty
+
+from Catalog.Counter import Counter
+from Logger.Logger import Logger
 
 class Wall(Line):
     def __init__(self, name: str, x1: float, y1: float, x2: float, y2: float, length: dict, **kwargs) -> None:
         super().__init__(name, x1, y1, x2, y2, length)
         self.extra_properties = kwargs
-        self.link = f"{Catalogue.CATALOG.value} > {Catalogue.WALL.value}" if (Item.count_items == 1 or Line.count_lines == 1) else f"{Catalogue.CATALOG_ALTER.value} > {Catalogue.WALL.value}"
+        self.link = f"{Catalogue.CATALOG.value} > {Catalogue.WALL.value}" if (Counter.count == 1) else f"{Catalogue.CATALOG_ALTER.value} > {Catalogue.WALL.value}"
 
     def set_properties(self, driver):
         super().set_properties(driver)
@@ -30,6 +32,7 @@ class Wall(Line):
     def place_line(self, driver):
         super().place_line(driver)
         self.set_properties(driver)
+        Logger.info(f"{self.name} is \033[1mready\033[0m")
 
 
 class ExtraProperties(Enum):

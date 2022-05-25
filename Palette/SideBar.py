@@ -1,5 +1,5 @@
 from enum import Enum
-
+from Logger.Logger import Logger
 
 class SideBarList(Enum):
     GUIDES = ".sidebar > div:nth-child(1)"
@@ -39,4 +39,7 @@ class SideBar:
 
     @staticmethod
     def get_items_row(driver) -> int:
-        return SideBar.count_sidebar_groups_rows(driver)
+        if SideBar.count_sidebar_groups_rows(driver) >= 4:
+            return 4
+        else:
+            return SideBar.count_sidebar_groups_rows(driver)

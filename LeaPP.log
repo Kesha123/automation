@@ -1,3 +1,381 @@
 
 2022-05-25 11:16:21,380 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
 2022-05-25 11:16:21,380 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 11:24:26,332 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 11:24:26,332 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 11:34:24,070 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 11:34:26,362 | Main properties for <class 'Catalog.Items.Bench.Bench'> object with [1mbench were set[0m
+2022-05-25 11:34:26,634 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 11:34:28,848 | Main properties for <class 'Catalog.Items.Bench.Bench'> object with [1mbench2 were set[0m
+2022-05-25 11:37:17,148 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 11:37:19,362 | Main properties for <class 'Catalog.Items.Bench.Bench'> object with [1mbench[0m name were set
+2022-05-25 11:37:19,648 | bench is [1mready[0m
+2022-05-25 11:37:19,648 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 11:37:21,713 | Main properties for <class 'Catalog.Items.Bench.Bench'> object with [1mbench2[0m name were set
+2022-05-25 11:37:21,713 | bench2 is [1mready[0m
+2022-05-25 11:38:04,407 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 11:38:06,739 | Main properties for <class 'Catalog.Items.Bench.Bench'> object with [1mbench[0mname were set
+2022-05-25 11:38:07,070 | bench is [1mready[0m
+2022-05-25 11:38:07,070 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 11:38:09,384 | Main properties for <class 'Catalog.Items.Bench.Bench'> object with [1mbench2[0mname were set
+2022-05-25 11:38:09,384 | bench2 is [1mready[0m
+2022-05-25 11:41:17,765 | <class 'Catalog.Lines.Wall.Wall'> object has been cteated
+2022-05-25 11:41:20,726 | Main properties for <class 'Catalog.Lines.Wall.Wall'> object with [1mLine 1[0m name were set
+2022-05-25 11:41:21,586 | Line 1 is [1mready[0m
+2022-05-25 11:41:21,586 | <class 'Catalog.Holes.Gate.Gate'> object has been cteated
+2022-05-25 11:41:23,831 | Main properties for <class 'Catalog.Holes.Gate.Gate'> object with [1mGate_1[0m name were set
+2022-05-25 11:41:24,156 | Gate_1 is [1mready[0m
+2022-05-25 11:41:24,157 | <class 'Catalog.Holes.Gate.Gate'> object has been cteated
+2022-05-25 11:41:26,098 | Main properties for <class 'Catalog.Holes.Gate.Gate'> object with [1mGate2[0m name were set
+2022-05-25 11:41:26,412 | Gate2 is [1mready[0m
+2022-05-25 11:41:26,413 | <class 'Catalog.Lines.Wall.Wall'> object has been cteated
+2022-05-25 11:41:29,159 | Main properties for <class 'Catalog.Lines.Wall.Wall'> object with [1mWall 2[0m name were set
+2022-05-25 11:41:30,016 | Wall 2 is [1mready[0m
+2022-05-25 11:41:30,016 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 11:42:53,987 | <class 'Catalog.Lines.Wall.Wall'> object has been cteated
+2022-05-25 11:42:56,956 | Main properties for <class 'Catalog.Lines.Wall.Wall'> object with [1mLine 1[0m name were set
+2022-05-25 11:42:57,821 | Line 1 is [1mready[0m
+2022-05-25 11:42:57,821 | <class 'Catalog.Holes.Gate.Gate'> object has been cteated
+2022-05-25 11:43:00,124 | Main properties for <class 'Catalog.Holes.Gate.Gate'> object with [1mGate_1[0m name were set
+2022-05-25 11:43:00,445 | Gate_1 is [1mready[0m
+2022-05-25 11:43:00,446 | <class 'Catalog.Holes.Gate.Gate'> object has been cteated
+2022-05-25 11:43:02,329 | Main properties for <class 'Catalog.Holes.Gate.Gate'> object with [1mGate2[0m name were set
+2022-05-25 11:43:02,653 | Gate2 is [1mready[0m
+2022-05-25 11:43:02,653 | <class 'Catalog.Lines.Wall.Wall'> object has been cteated
+2022-05-25 11:43:05,448 | Main properties for <class 'Catalog.Lines.Wall.Wall'> object with [1mWall 2[0m name were set
+2022-05-25 11:43:06,259 | Wall 2 is [1mready[0m
+2022-05-25 11:43:06,259 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 11:44:50,058 | <class 'Catalog.Lines.Wall.Wall'> object has been cteated
+2022-05-25 11:44:53,041 | Main properties for <class 'Catalog.Lines.Wall.Wall'> object with [1mLine 1[0m name were set
+2022-05-25 11:44:53,949 | Line 1 is [1mready[0m
+2022-05-25 11:44:53,950 | <class 'Catalog.Holes.Gate.Gate'> object has been cteated
+2022-05-25 11:44:56,200 | Main properties for <class 'Catalog.Holes.Gate.Gate'> object with [1mGate_1[0m name were set
+2022-05-25 11:44:56,495 | Gate_1 is [1mready[0m
+2022-05-25 11:44:56,495 | <class 'Catalog.Holes.Gate.Gate'> object has been cteated
+2022-05-25 11:44:58,427 | Main properties for <class 'Catalog.Holes.Gate.Gate'> object with [1mGate2[0m name were set
+2022-05-25 11:44:58,732 | Gate2 is [1mready[0m
+2022-05-25 11:44:58,732 | <class 'Catalog.Lines.Wall.Wall'> object has been cteated
+2022-05-25 11:45:01,567 | Main properties for <class 'Catalog.Lines.Wall.Wall'> object with [1mWall 2[0m name were set
+2022-05-25 11:45:02,387 | Wall 2 is [1mready[0m
+2022-05-25 11:45:02,387 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 11:46:32,923 | <class 'Catalog.Lines.Wall.Wall'> object has been cteated
+2022-05-25 11:46:35,936 | Main properties for <class 'Catalog.Lines.Wall.Wall'> object with [1mLine 1[0m name were set
+2022-05-25 11:46:36,816 | Line 1 is [1mready[0m
+2022-05-25 11:46:36,816 | <class 'Catalog.Holes.Gate.Gate'> object has been cteated
+2022-05-25 11:46:39,137 | Main properties for <class 'Catalog.Holes.Gate.Gate'> object with [1mGate_1[0m name were set
+2022-05-25 11:46:39,470 | Gate_1 is [1mready[0m
+2022-05-25 11:46:39,470 | <class 'Catalog.Holes.Gate.Gate'> object has been cteated
+2022-05-25 11:46:41,425 | Main properties for <class 'Catalog.Holes.Gate.Gate'> object with [1mGate2[0m name were set
+2022-05-25 11:46:41,747 | Gate2 is [1mready[0m
+2022-05-25 11:46:41,747 | <class 'Catalog.Lines.Wall.Wall'> object has been cteated
+2022-05-25 11:46:44,528 | Main properties for <class 'Catalog.Lines.Wall.Wall'> object with [1mWall 2[0m name were set
+2022-05-25 11:46:45,391 | Wall 2 is [1mready[0m
+2022-05-25 11:46:45,391 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 11:46:47,485 | Main properties for <class 'Catalog.Items.Bench.Bench'> object with [1mbench[0m name were set
+2022-05-25 11:46:47,780 | bench is [1mready[0m
+2022-05-25 11:46:47,780 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 11:46:50,020 | Main properties for <class 'Catalog.Items.Bench.Bench'> object with [1mbench2[0m name were set
+2022-05-25 11:46:50,020 | bench2 is [1mready[0m
+2022-05-25 11:46:50,155 | Saving on Linux pcs hasn't been implemented so far due to ...
+2022-05-25 11:47:27,623 | <class 'Catalog.Lines.Wall.Wall'> object has been cteated
+2022-05-25 11:47:42,245 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 11:49:26,554 | <class 'Catalog.Lines.Wall.Wall'> object has been cteated
+2022-05-25 11:49:29,540 | Main properties for <class 'Catalog.Lines.Wall.Wall'> object with [1mLine 1[0m name were set
+2022-05-25 11:49:30,437 | Line 1 is [1mready[0m
+2022-05-25 11:49:30,438 | <class 'Catalog.Holes.Gate.Gate'> object has been cteated
+2022-05-25 11:49:32,783 | Main properties for <class 'Catalog.Holes.Gate.Gate'> object with [1mGate_1[0m name were set
+2022-05-25 11:49:33,110 | Gate_1 is [1mready[0m
+2022-05-25 11:49:33,110 | <class 'Catalog.Holes.Gate.Gate'> object has been cteated
+2022-05-25 11:49:35,119 | Main properties for <class 'Catalog.Holes.Gate.Gate'> object with [1mGate2[0m name were set
+2022-05-25 11:49:35,423 | Gate2 is [1mready[0m
+2022-05-25 11:49:35,423 | <class 'Catalog.Lines.Wall.Wall'> object has been cteated
+2022-05-25 11:49:38,327 | Main properties for <class 'Catalog.Lines.Wall.Wall'> object with [1mWall 2[0m name were set
+2022-05-25 11:49:39,118 | Wall 2 is [1mready[0m
+2022-05-25 11:49:39,118 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 11:50:47,328 | <class 'Catalog.Lines.Wall.Wall'> object has been cteated
+2022-05-25 11:50:50,361 | Main properties for <class 'Catalog.Lines.Wall.Wall'> object with [1mWall 2[0m name were set
+2022-05-25 11:50:51,181 | Wall 2 is [1mready[0m
+2022-05-25 11:50:51,181 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 11:50:53,480 | Main properties for <class 'Catalog.Items.Bench.Bench'> object with [1mbench[0m name were set
+2022-05-25 11:50:53,829 | bench is [1mready[0m
+2022-05-25 11:50:53,829 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 11:50:56,050 | Main properties for <class 'Catalog.Items.Bench.Bench'> object with [1mbench2[0m name were set
+2022-05-25 11:50:56,050 | bench2 is [1mready[0m
+2022-05-25 11:50:56,198 | Saving on Linux pcs hasn't been implemented so far due to ...
+2022-05-25 11:51:19,125 | <class 'Catalog.Lines.Wall.Wall'> object has been cteated
+2022-05-25 11:51:22,061 | Main properties for <class 'Catalog.Lines.Wall.Wall'> object with [1mWall 2[0m name were set
+2022-05-25 11:51:22,929 | Wall 2 is [1mready[0m
+2022-05-25 11:51:22,929 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 11:51:25,251 | Main properties for <class 'Catalog.Items.Bench.Bench'> object with [1mbench[0m name were set
+2022-05-25 11:51:25,559 | bench is [1mready[0m
+2022-05-25 11:51:25,559 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 11:51:27,719 | Main properties for <class 'Catalog.Items.Bench.Bench'> object with [1mbench2[0m name were set
+2022-05-25 11:51:27,719 | bench2 is [1mready[0m
+2022-05-25 11:51:27,859 | Saving on Linux pcs hasn't been implemented so far due to ...
+2022-05-25 11:52:11,833 | <class 'Catalog.Lines.Wall.Wall'> object has been cteated
+2022-05-25 11:52:14,766 | Main properties for <class 'Catalog.Lines.Wall.Wall'> object with [1mLine 1[0m name were set
+2022-05-25 11:52:15,575 | Line 1 is [1mready[0m
+2022-05-25 11:52:15,575 | <class 'Catalog.Holes.Gate.Gate'> object has been cteated
+2022-05-25 11:52:17,884 | Main properties for <class 'Catalog.Holes.Gate.Gate'> object with [1mGate_1[0m name were set
+2022-05-25 11:52:18,204 | Gate_1 is [1mready[0m
+2022-05-25 11:52:18,204 | <class 'Catalog.Holes.Gate.Gate'> object has been cteated
+2022-05-25 11:52:20,159 | Main properties for <class 'Catalog.Holes.Gate.Gate'> object with [1mGate2[0m name were set
+2022-05-25 11:52:20,455 | Gate2 is [1mready[0m
+2022-05-25 11:52:20,456 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 11:52:22,684 | Main properties for <class 'Catalog.Items.Bench.Bench'> object with [1mbench[0m name were set
+2022-05-25 11:52:22,967 | bench is [1mready[0m
+2022-05-25 11:52:22,968 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 11:52:57,301 | <class 'Catalog.Lines.Wall.Wall'> object has been cteated
+2022-05-25 11:53:00,303 | Main properties for <class 'Catalog.Lines.Wall.Wall'> object with [1mLine 1[0m name were set
+2022-05-25 11:53:01,193 | Line 1 is [1mready[0m
+2022-05-25 11:53:01,193 | <class 'Catalog.Holes.Gate.Gate'> object has been cteated
+2022-05-25 11:53:03,540 | Main properties for <class 'Catalog.Holes.Gate.Gate'> object with [1mGate_1[0m name were set
+2022-05-25 11:53:03,850 | Gate_1 is [1mready[0m
+2022-05-25 11:53:03,851 | <class 'Catalog.Holes.Gate.Gate'> object has been cteated
+2022-05-25 11:53:05,830 | Main properties for <class 'Catalog.Holes.Gate.Gate'> object with [1mGate2[0m name were set
+2022-05-25 11:53:06,134 | Gate2 is [1mready[0m
+2022-05-25 11:53:06,135 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 11:53:08,258 | Main properties for <class 'Catalog.Items.Bench.Bench'> object with [1mbench[0m name were set
+2022-05-25 11:53:08,561 | bench is [1mready[0m
+2022-05-25 11:53:08,561 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 11:54:11,997 | <class 'Catalog.Lines.Wall.Wall'> object has been cteated
+2022-05-25 11:54:14,941 | Main properties for <class 'Catalog.Lines.Wall.Wall'> object with [1mLine 1[0m name were set
+2022-05-25 11:54:15,728 | Line 1 is [1mready[0m
+2022-05-25 11:54:15,728 | <class 'Catalog.Holes.Gate.Gate'> object has been cteated
+2022-05-25 11:54:17,959 | Main properties for <class 'Catalog.Holes.Gate.Gate'> object with [1mGate_1[0m name were set
+2022-05-25 11:54:18,257 | Gate_1 is [1mready[0m
+2022-05-25 11:54:18,257 | <class 'Catalog.Holes.Gate.Gate'> object has been cteated
+2022-05-25 11:54:20,328 | Main properties for <class 'Catalog.Holes.Gate.Gate'> object with [1mGate2[0m name were set
+2022-05-25 11:54:20,633 | Gate2 is [1mready[0m
+2022-05-25 11:54:20,633 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 11:54:21,723 | .sidebar > div:nth-child(3) > div:nth-child(2) > div:nth-child(1) > div:nth-child(4) > div:nth-child(2)
+2022-05-25 11:54:22,885 | Main properties for <class 'Catalog.Items.Bench.Bench'> object with [1mbench[0m name were set
+2022-05-25 11:54:23,193 | bench is [1mready[0m
+2022-05-25 11:54:23,193 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 11:54:24,321 | .sidebar > div:nth-child(3) > div:nth-child(2) > div:nth-child(1) > div:nth-child(5) > div:nth-child(3)
+2022-05-25 11:56:51,463 | <class 'Catalog.Lines.Wall.Wall'> object has been cteated
+2022-05-25 11:56:54,483 | Main properties for <class 'Catalog.Lines.Wall.Wall'> object with [1mLine 1[0m name were set
+2022-05-25 11:56:55,373 | Line 1 is [1mready[0m
+2022-05-25 11:56:55,373 | <class 'Catalog.Holes.Gate.Gate'> object has been cteated
+2022-05-25 11:56:57,782 | Main properties for <class 'Catalog.Holes.Gate.Gate'> object with [1mGate_1[0m name were set
+2022-05-25 11:56:58,081 | Gate_1 is [1mready[0m
+2022-05-25 11:56:58,082 | <class 'Catalog.Holes.Gate.Gate'> object has been cteated
+2022-05-25 11:57:00,055 | Main properties for <class 'Catalog.Holes.Gate.Gate'> object with [1mGate2[0m name were set
+2022-05-25 11:57:00,365 | Gate2 is [1mready[0m
+2022-05-25 11:57:00,365 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 11:57:01,450 | .sidebar > div:nth-child(3) > div:nth-child(2) > div:nth-child(1) > div:nth-child(4) > div:nth-child(2)
+2022-05-25 11:57:02,642 | Main properties for <class 'Catalog.Items.Bench.Bench'> object with [1mbench[0m name were set
+2022-05-25 11:57:02,968 | bench is [1mready[0m
+2022-05-25 11:57:02,968 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 11:57:04,061 | .sidebar > div:nth-child(3) > div:nth-child(2) > div:nth-child(1) > div:nth-child(4) > div:nth-child(3)
+2022-05-25 11:57:05,172 | Main properties for <class 'Catalog.Items.Bench.Bench'> object with [1mbench2[0m name were set
+2022-05-25 11:57:05,172 | bench2 is [1mready[0m
+2022-05-25 11:57:05,317 | Saving on Linux pcs hasn't been implemented so far due to ...
+2022-05-25 11:57:32,431 | <class 'Catalog.Lines.Wall.Wall'> object has been cteated
+2022-05-25 11:57:35,427 | Main properties for <class 'Catalog.Lines.Wall.Wall'> object with [1mWall 2[0m name were set
+2022-05-25 11:57:36,321 | Wall 2 is [1mready[0m
+2022-05-25 11:57:36,321 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 11:57:37,480 | .sidebar > div:nth-child(3) > div:nth-child(2) > div:nth-child(1) > div:nth-child(3) > div:nth-child(2)
+2022-05-25 11:57:38,681 | Main properties for <class 'Catalog.Items.Bench.Bench'> object with [1mbench[0m name were set
+2022-05-25 11:57:39,024 | bench is [1mready[0m
+2022-05-25 11:57:39,024 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 11:57:40,202 | .sidebar > div:nth-child(3) > div:nth-child(2) > div:nth-child(1) > div:nth-child(3) > div:nth-child(3)
+2022-05-25 11:57:41,400 | Main properties for <class 'Catalog.Items.Bench.Bench'> object with [1mbench2[0m name were set
+2022-05-25 11:57:41,400 | bench2 is [1mready[0m
+2022-05-25 11:57:41,560 | Saving on Linux pcs hasn't been implemented so far due to ...
+2022-05-25 11:58:02,900 | <class 'Catalog.Lines.Wall.Wall'> object has been cteated
+2022-05-25 11:58:05,960 | Main properties for <class 'Catalog.Lines.Wall.Wall'> object with [1mLine 1[0m name were set
+2022-05-25 11:58:06,843 | Line 1 is [1mready[0m
+2022-05-25 11:58:06,843 | <class 'Catalog.Holes.Gate.Gate'> object has been cteated
+2022-05-25 11:58:09,181 | Main properties for <class 'Catalog.Holes.Gate.Gate'> object with [1mGate_1[0m name were set
+2022-05-25 11:58:09,514 | Gate_1 is [1mready[0m
+2022-05-25 11:58:09,514 | <class 'Catalog.Holes.Gate.Gate'> object has been cteated
+2022-05-25 11:58:11,444 | Main properties for <class 'Catalog.Holes.Gate.Gate'> object with [1mGate2[0m name were set
+2022-05-25 11:58:11,728 | Gate2 is [1mready[0m
+2022-05-25 11:58:11,728 | <class 'Catalog.Lines.Wall.Wall'> object has been cteated
+2022-05-25 11:58:14,572 | Main properties for <class 'Catalog.Lines.Wall.Wall'> object with [1mWall 2[0m name were set
+2022-05-25 11:58:15,378 | Wall 2 is [1mready[0m
+2022-05-25 11:58:15,378 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 11:58:16,441 | .sidebar > div:nth-child(3) > div:nth-child(2) > div:nth-child(1) > div:nth-child(4) > div:nth-child(2)
+2022-05-25 11:58:17,589 | Main properties for <class 'Catalog.Items.Bench.Bench'> object with [1mbench[0m name were set
+2022-05-25 11:58:17,888 | bench is [1mready[0m
+2022-05-25 11:58:17,889 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 11:58:19,005 | .sidebar > div:nth-child(3) > div:nth-child(2) > div:nth-child(1) > div:nth-child(4) > div:nth-child(3)
+2022-05-25 11:58:20,122 | Main properties for <class 'Catalog.Items.Bench.Bench'> object with [1mbench2[0m name were set
+2022-05-25 11:58:20,122 | bench2 is [1mready[0m
+2022-05-25 11:58:20,270 | Saving on Linux pcs hasn't been implemented so far due to ...
+2022-05-25 11:58:40,186 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 11:58:41,336 | .sidebar > div:nth-child(3) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2)
+2022-05-25 11:58:42,526 | Main properties for <class 'Catalog.Items.Bench.Bench'> object with [1mbench[0m name were set
+2022-05-25 11:58:42,856 | bench is [1mready[0m
+2022-05-25 11:58:42,856 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 12:12:47,377 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 12:12:48,619 | .sidebar > div:nth-child(3) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2)
+2022-05-25 12:12:49,756 | Main properties for <class 'Catalog.Items.Bench.Bench'> object with [1mbench[0m name were set
+2022-05-25 12:12:50,073 | bench is [1mready[0m
+2022-05-25 12:12:50,074 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 12:13:20,603 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 12:13:21,826 | .sidebar > div:nth-child(3) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2)
+2022-05-25 12:13:23,018 | Main properties for <class 'Catalog.Items.Bench.Bench'> object with [1mbench[0m name were set
+2022-05-25 12:13:23,317 | bench is [1mready[0m
+2022-05-25 12:13:23,318 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 12:13:24,451 | .sidebar > div:nth-child(3) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3)
+2022-05-25 12:13:25,585 | Main properties for <class 'Catalog.Items.Bench.Bench'> object with [1mbench2[0m name were set
+2022-05-25 12:13:25,586 | bench2 is [1mready[0m
+2022-05-25 12:13:25,586 | <class 'Catalog.Lines.Wall.Wall'> object has been cteated
+2022-05-25 12:16:11,402 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 12:16:33,723 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 12:17:13,424 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 12:17:14,630 | .sidebar > div:nth-child(3) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2)
+2022-05-25 12:17:15,812 | Main properties for <class 'Catalog.Items.Bench.Bench'> object with [1mbench[0m name were set
+2022-05-25 12:17:16,152 | bench is [1mready[0m
+2022-05-25 12:17:16,153 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 12:17:17,304 | .sidebar > div:nth-child(3) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3)
+2022-05-25 12:17:18,448 | Main properties for <class 'Catalog.Items.Bench.Bench'> object with [1mbench2[0m name were set
+2022-05-25 12:17:18,448 | bench2 is [1mready[0m
+2022-05-25 12:17:18,448 | <class 'Catalog.Lines.Wall.Wall'> object has been cteated
+2022-05-25 12:20:29,229 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 12:20:29,229 | 1; 0
+2022-05-25 12:20:31,626 | Main properties for <class 'Catalog.Items.Bench.Bench'> object with [1mbench[0m name were set
+2022-05-25 12:20:31,939 | bench is [1mready[0m
+2022-05-25 12:20:31,940 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 12:20:31,940 | 2; 0
+2022-05-25 12:20:34,293 | Main properties for <class 'Catalog.Items.Bench.Bench'> object with [1mbench2[0m name were set
+2022-05-25 12:20:34,293 | bench2 is [1mready[0m
+2022-05-25 12:20:34,293 | <class 'Catalog.Lines.Wall.Wall'> object has been cteated
+2022-05-25 12:20:34,294 | 2; 1
+2022-05-25 12:32:43,204 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 12:32:43,204 | 1; 0
+2022-05-25 12:32:43,204 | #app > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > div:nth-child(10)
+2022-05-25 12:32:45,553 | Main properties for <class 'Catalog.Items.Bench.Bench'> object with [1mbench[0m name were set
+2022-05-25 12:32:45,857 | bench is [1mready[0m
+2022-05-25 12:32:45,858 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 12:32:45,858 | 2; 0
+2022-05-25 12:32:45,858 | #app > div:nth-child(1) > div:nth-child(2) > div:nth-child(4) > div:nth-child(10)
+2022-05-25 12:32:48,035 | Main properties for <class 'Catalog.Items.Bench.Bench'> object with [1mbench2[0m name were set
+2022-05-25 12:32:48,035 | bench2 is [1mready[0m
+2022-05-25 12:32:48,035 | <class 'Catalog.Lines.Wall.Wall'> object has been cteated
+2022-05-25 12:32:48,035 | 2; 1
+2022-05-25 12:32:48,036 | #app > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > div:nth-child(3)
+2022-05-25 12:34:51,869 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 12:34:51,869 | 1; 0
+2022-05-25 12:34:51,869 | #app > div:nth-child(1) > div:nth-child(2) > div:nth-child(4) > div:nth-child(10)
+2022-05-25 12:35:19,173 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 12:35:19,173 | 1; 0
+2022-05-25 12:35:19,174 | #app > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > div:nth-child(10)
+2022-05-25 12:35:21,513 | Main properties for <class 'Catalog.Items.Bench.Bench'> object with [1mbench[0m name were set
+2022-05-25 12:35:21,852 | bench is [1mready[0m
+2022-05-25 12:35:21,852 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 12:35:21,852 | 2; 0
+2022-05-25 12:35:21,852 | #app > div:nth-child(1) > div:nth-child(2) > div:nth-child(4) > div:nth-child(10)
+2022-05-25 12:35:24,223 | Main properties for <class 'Catalog.Items.Bench.Bench'> object with [1mbench2[0m name were set
+2022-05-25 12:35:24,223 | bench2 is [1mready[0m
+2022-05-25 12:35:24,223 | <class 'Catalog.Lines.Wall.Wall'> object has been cteated
+2022-05-25 12:35:24,223 | 2; 1
+2022-05-25 12:35:24,223 | #app > div:nth-child(1) > div:nth-child(2) > div:nth-child(4) > div:nth-child(3)
+2022-05-25 12:35:27,211 | Main properties for <class 'Catalog.Lines.Wall.Wall'> object with [1mLine 1[0m name were set
+2022-05-25 12:35:28,053 | Line 1 is [1mready[0m
+2022-05-25 12:35:28,053 | <class 'Catalog.Holes.Gate.Gate'> object has been cteated
+2022-05-25 12:35:30,496 | Main properties for <class 'Catalog.Holes.Gate.Gate'> object with [1mGate_1[0m name were set
+2022-05-25 12:35:30,824 | Gate_1 is [1mready[0m
+2022-05-25 12:35:30,825 | <class 'Catalog.Holes.Gate.Gate'> object has been cteated
+2022-05-25 12:35:32,840 | Main properties for <class 'Catalog.Holes.Gate.Gate'> object with [1mGate2[0m name were set
+2022-05-25 12:35:33,148 | Gate2 is [1mready[0m
+2022-05-25 12:35:33,148 | <class 'Catalog.Lines.Wall.Wall'> object has been cteated
+2022-05-25 12:35:33,148 | 2; 2
+2022-05-25 12:35:33,148 | #app > div:nth-child(1) > div:nth-child(2) > div:nth-child(4) > div:nth-child(3)
+2022-05-25 12:35:35,984 | Main properties for <class 'Catalog.Lines.Wall.Wall'> object with [1mWall 2[0m name were set
+2022-05-25 12:35:36,821 | Wall 2 is [1mready[0m
+2022-05-25 12:35:36,958 | Saving on Linux pcs hasn't been implemented so far due to ...
+2022-05-25 12:35:57,027 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 12:35:57,027 | 1; 0
+2022-05-25 12:35:57,027 | #app > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > div:nth-child(10)
+2022-05-25 12:35:59,422 | Main properties for <class 'Catalog.Items.Bench.Bench'> object with [1mbench[0m name were set
+2022-05-25 12:35:59,762 | bench is [1mready[0m
+2022-05-25 12:35:59,763 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 12:35:59,763 | 2; 0
+2022-05-25 12:35:59,763 | #app > div:nth-child(1) > div:nth-child(2) > div:nth-child(4) > div:nth-child(10)
+2022-05-25 12:36:02,108 | Main properties for <class 'Catalog.Items.Bench.Bench'> object with [1mbench2[0m name were set
+2022-05-25 12:36:02,108 | bench2 is [1mready[0m
+2022-05-25 12:36:02,108 | <class 'Catalog.Lines.Wall.Wall'> object has been cteated
+2022-05-25 12:36:02,108 | 2; 1
+2022-05-25 12:36:02,109 | #app > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > div:nth-child(3)
+2022-05-25 12:40:45,624 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 12:40:45,625 | 1; 0
+2022-05-25 12:40:45,625 | #app > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > div:nth-child(10)
+2022-05-25 12:40:47,978 | Main properties for <class 'Catalog.Items.Bench.Bench'> object with [1mbench[0m name were set
+2022-05-25 12:40:48,266 | bench is [1mready[0m
+2022-05-25 12:40:48,266 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 12:40:48,267 | 2; 0
+2022-05-25 12:40:48,267 | #app > div:nth-child(1) > div:nth-child(2) > div:nth-child(4) > div:nth-child(10)
+2022-05-25 12:40:50,500 | Main properties for <class 'Catalog.Items.Bench.Bench'> object with [1mbench2[0m name were set
+2022-05-25 12:40:50,500 | bench2 is [1mready[0m
+2022-05-25 12:40:50,500 | <class 'Catalog.Lines.Wall.Wall'> object has been cteated
+2022-05-25 12:40:50,500 | 2; 1
+2022-05-25 12:40:50,500 | #app > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > div:nth-child(3)
+2022-05-25 12:41:33,294 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 12:41:33,294 | 1; 0
+2022-05-25 12:41:33,294 | #app > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > div:nth-child(10)
+2022-05-25 12:41:35,580 | Main properties for <class 'Catalog.Items.Bench.Bench'> object with [1mbench[0m name were set
+2022-05-25 12:41:35,905 | bench is [1mready[0m
+2022-05-25 12:41:35,905 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 12:41:35,905 | 2; 0
+2022-05-25 12:41:35,905 | #app > div:nth-child(1) > div:nth-child(2) > div:nth-child(4) > div:nth-child(10)
+2022-05-25 12:41:38,220 | Main properties for <class 'Catalog.Items.Bench.Bench'> object with [1mbench2[0m name were set
+2022-05-25 12:41:38,220 | bench2 is [1mready[0m
+2022-05-25 12:41:38,220 | <class 'Catalog.Lines.Wall.Wall'> object has been cteated
+2022-05-25 12:41:38,220 | 2; 1
+2022-05-25 12:41:38,220 | #app > div:nth-child(1) > div:nth-child(2) > div:nth-child(4) > div:nth-child(3)
+2022-05-25 12:41:41,125 | Main properties for <class 'Catalog.Lines.Wall.Wall'> object with [1mLine 1[0m name were set
+2022-05-25 12:41:42,011 | Line 1 is [1mready[0m
+2022-05-25 12:41:42,012 | <class 'Catalog.Holes.Gate.Gate'> object has been cteated
+2022-05-25 12:41:44,193 | Main properties for <class 'Catalog.Holes.Gate.Gate'> object with [1mGate_1[0m name were set
+2022-05-25 12:41:44,486 | Gate_1 is [1mready[0m
+2022-05-25 12:41:44,486 | <class 'Catalog.Holes.Gate.Gate'> object has been cteated
+2022-05-25 12:41:46,289 | Main properties for <class 'Catalog.Holes.Gate.Gate'> object with [1mGate2[0m name were set
+2022-05-25 12:41:46,588 | Gate2 is [1mready[0m
+2022-05-25 12:41:46,588 | <class 'Catalog.Lines.Wall.Wall'> object has been cteated
+2022-05-25 12:41:46,588 | 2; 2
+2022-05-25 12:41:46,588 | #app > div:nth-child(1) > div:nth-child(2) > div:nth-child(4) > div:nth-child(3)
+2022-05-25 12:41:49,489 | Main properties for <class 'Catalog.Lines.Wall.Wall'> object with [1mWall 2[0m name were set
+2022-05-25 12:41:50,298 | Wall 2 is [1mready[0m
+2022-05-25 12:41:50,459 | Saving on Linux pcs hasn't been implemented so far due to ...
+2022-05-25 12:44:28,217 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 12:44:30,535 | Main properties for <class 'Catalog.Items.Bench.Bench'> object with [1mbench[0m name were set
+2022-05-25 12:44:30,841 | bench is [1mready[0m
+2022-05-25 12:44:30,841 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 12:44:33,086 | Main properties for <class 'Catalog.Items.Bench.Bench'> object with [1mbench2[0m name were set
+2022-05-25 12:44:33,086 | bench2 is [1mready[0m
+2022-05-25 12:44:33,086 | <class 'Catalog.Lines.Wall.Wall'> object has been cteated
+2022-05-25 12:44:36,105 | Main properties for <class 'Catalog.Lines.Wall.Wall'> object with [1mLine 1[0m name were set
+2022-05-25 12:44:36,966 | Line 1 is [1mready[0m
+2022-05-25 12:44:36,967 | <class 'Catalog.Holes.Gate.Gate'> object has been cteated
+2022-05-25 12:44:39,201 | Main properties for <class 'Catalog.Holes.Gate.Gate'> object with [1mGate_1[0m name were set
+2022-05-25 12:44:39,514 | Gate_1 is [1mready[0m
+2022-05-25 12:44:39,515 | <class 'Catalog.Holes.Gate.Gate'> object has been cteated
+2022-05-25 12:44:41,502 | Main properties for <class 'Catalog.Holes.Gate.Gate'> object with [1mGate2[0m name were set
+2022-05-25 12:44:41,819 | Gate2 is [1mready[0m
+2022-05-25 12:44:41,819 | <class 'Catalog.Lines.Wall.Wall'> object has been cteated
+2022-05-25 12:44:44,716 | Main properties for <class 'Catalog.Lines.Wall.Wall'> object with [1mWall 2[0m name were set
+2022-05-25 12:44:45,548 | Wall 2 is [1mready[0m
+2022-05-25 12:44:45,686 | [Errno 2] No such file or directory: '/home/innokentii/Downloads/Project.json' -> './Project.json'
+2022-05-25 12:45:31,935 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 12:45:34,224 | Main properties for <class 'Catalog.Items.Bench.Bench'> object with [1mbench[0m name were set
+2022-05-25 12:45:34,519 | bench is [1mready[0m
+2022-05-25 12:45:34,519 | <class 'Catalog.Items.Bench.Bench'> object has been cteated
+2022-05-25 12:45:36,708 | Main properties for <class 'Catalog.Items.Bench.Bench'> object with [1mbench2[0m name were set
+2022-05-25 12:45:36,708 | bench2 is [1mready[0m
+2022-05-25 12:45:36,708 | <class 'Catalog.Lines.Wall.Wall'> object has been cteated
+2022-05-25 12:45:39,652 | Main properties for <class 'Catalog.Lines.Wall.Wall'> object with [1mLine 1[0m name were set
+2022-05-25 12:45:40,509 | Line 1 is [1mready[0m
+2022-05-25 12:45:40,509 | <class 'Catalog.Holes.Gate.Gate'> object has been cteated
+2022-05-25 12:45:42,754 | Main properties for <class 'Catalog.Holes.Gate.Gate'> object with [1mGate_1[0m name were set
+2022-05-25 12:45:43,081 | Gate_1 is [1mready[0m
+2022-05-25 12:45:43,082 | <class 'Catalog.Holes.Gate.Gate'> object has been cteated
+2022-05-25 12:45:45,040 | Main properties for <class 'Catalog.Holes.Gate.Gate'> object with [1mGate2[0m name were set
+2022-05-25 12:45:45,348 | Gate2 is [1mready[0m
+2022-05-25 12:45:45,348 | <class 'Catalog.Lines.Wall.Wall'> object has been cteated
+2022-05-25 12:45:48,260 | Main properties for <class 'Catalog.Lines.Wall.Wall'> object with [1mWall 2[0m name were set
+2022-05-25 12:45:49,124 | Wall 2 is [1mready[0m
+2022-05-25 12:45:49,247 | Error occured while saving the file:
+	[Errno 2] No such file or directory: '/home/innokentii/Downloads/Project.json' -> './Project.json'

@@ -7,6 +7,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
 from selenium import webdriver
 
+from Catalog.Counter import Counter
 
 from Logger.Logger import Logger
 
@@ -19,6 +20,7 @@ class Line:
         Logger.info(f"{type(self)} object has been cteated")
         Line.count_lines += 1
         Line.count_Ids += 1
+        Counter.count += 1
         self.id = Line.count_Ids
         self.number = Line.count_lines
         self.name = name
@@ -48,6 +50,7 @@ class Line:
         x2 = SubbmitProperty("x2",f"{SideBarList.PROPERTIES.value} > {SideBarList.LINE_MAIN_PROPERTIES_BODY.value} > {LineSelectorList.X2.value}",self.x2).set_property(driver)
         y2 = SubbmitProperty("y2",f"{SideBarList.PROPERTIES.value} > {SideBarList.LINE_MAIN_PROPERTIES_BODY.value} > {LineSelectorList.Y2.value}",self.y2).set_property(driver)
         length = LengthProperty("length",f"{LineSelectorList.LENGTH.value}",self.length).set_property(driver)
+        Logger.info(f"Main properties for {type(self)} object with \033[1m{self.name}\033[0m name were set")
 
     @staticmethod
     def insert_line_on_layer(driver: webdriver.Firefox) -> None:

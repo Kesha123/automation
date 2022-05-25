@@ -3,7 +3,7 @@ from enum import Enum
 from Palette.Layer import Layer
 from Palette.SideBar import SideBar, SideBarList
 from Palette.Properties import FieldProperty, SubbmitProperty
-
+from Catalog.Counter import Counter
 from Logger.Logger import Logger
 
 class Item:
@@ -14,6 +14,7 @@ class Item:
         Logger.info(f"{type(self)} object has been cteated")
         Item.count_items += 1
         Item.count_Ids += 1
+        Counter.count += 1
         self.id = Item.count_Ids
         self.number = Item.count_items
         self.x = x
@@ -33,6 +34,8 @@ class Item:
         x = SubbmitProperty("x",f"{SideBarList.PROPERTIES.value} > {SideBarList.ITEM_MAIN_PROPERTIES_BODY.value} > {ItemSelectorList.X.value}",self.x).set_property(driver)
         y = SubbmitProperty("y",f"{SideBarList.PROPERTIES.value} > {SideBarList.ITEM_MAIN_PROPERTIES_BODY.value} > {ItemSelectorList.Y.value}",self.y).set_property(driver)
         rotation = SubbmitProperty("rotation",f"{SideBarList.PROPERTIES.value} > {SideBarList.ITEM_MAIN_PROPERTIES_BODY.value} > {ItemSelectorList.ROTATION.value}",self.rotation).set_property(driver)
+
+        Logger.info(f"Main properties for {type(self)} object with \033[1m{self.name}\033[0m name were set")
 
     def place_item(self, driver):
         ToolBar.open_catalog(driver)
@@ -56,3 +59,6 @@ class ItemSelectorList(Enum):
     X = "tr:nth-child(2)"
     Y = "tr:nth-child(3)"
     ROTATION = "tr:nth-child(4)"
+
+
+#.sidebar > div:nth-child(3) > div:nth-child(2) > div:nth-child(1) > div:nth-child(4) > div:nth-child(2)

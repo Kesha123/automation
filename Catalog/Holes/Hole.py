@@ -8,7 +8,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium import webdriver
 
 from Logger.Logger import Logger
-
+from Catalog.Counter import Counter
 
 class Hole:
     count_holes: int = 0
@@ -19,6 +19,7 @@ class Hole:
         Logger.info(f"{type(self)} object has been cteated")
         Hole.count_holes += 1
         Hole.count_Ids += 1
+        Counter.count += 1
         self.id = Hole.count_Ids
         self.number = Hole.count_holes
         self.parent = parent
@@ -51,6 +52,7 @@ class Hole:
         height = LengthProperty("height",HoleSelectorList.HEIGHT.value,self.height).set_property(driver)
         altitude = LengthProperty("altitude",HoleSelectorList.ALTITUDE.value,self.altitude).set_property(driver)
         thickness = LengthProperty("thickness",HoleSelectorList.THICKNESS.value,self.thickness).set_property(driver)
+        Logger.info(f"Main properties for {type(self)} object with \033[1m{self.name}\033[0m name were set")
 
     def insert_hole_on_layer(self, driver: webdriver.Firefox) -> None:
         if Line.count_lines == 0:

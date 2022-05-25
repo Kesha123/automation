@@ -4,6 +4,8 @@ from Catalog.Catalogue import Catalogue
 from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
 
+from Logger.Logger import Logger
+
 class Gate(Hole):
     def __init__(self, parent: Line, name: str, offset1: dict, offset2: dict, 
                  width: dict = {"length":80, "unit":"cm"}, height: dict = {"length":215, "unit":"cm"}, altitude: dict = {"length":0, "unit":"cm"}, thickness: dict = {"length":30, "unit":"cm"}) -> None:
@@ -17,4 +19,5 @@ class Gate(Hole):
     def place_hole(self, driver):
         super().place_hole(driver)
         self.set_properties(driver)
+        Logger.info(f"{self.name} is \033[1mready\033[0m")
         

@@ -43,18 +43,16 @@ class ToolBar:
         match platform.system():
             case "Linux":
                 PATH = os.path.expanduser("~")
-                Logger.warning(f"Saving on {platform.system()} pcs hasn't been implemented so far due to ...")
-                os.replace(f"{PATH}/Downloads/{project_name}.json", f"{path}/{project_name}.json")
+                try:
+                    os.replace(f"{PATH}/Downloads/{project_name}.json", f"{path}/{project_name}.json")
+                except FileNotFoundError as ex:
+                    Logger.error(f"Error occured while saving the file:\n\t{ex}")
             case "Windows":
                 Logger.warning(f"Saving on {platform.system()} pcs hasn't been implemented so far due to ...")
                 pass 
             case "Darwin":
                 Logger.warning(f"Saving on {platform.system()} pcs hasn't been implemented so far due to ...")
-                pass 
-
-        PATH = os.path.expanduser("~")
-        os.replace(f"{PATH}/Загрузки/{project_name}.json", f"{path}/{project_name}.json")
-
+                pass
 
     @staticmethod
     def load_project(driver, parser) -> None:
