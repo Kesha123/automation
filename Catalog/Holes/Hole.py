@@ -4,6 +4,7 @@ from Palette.ToolBar import ToolBar, ToolBarList
 from Catalog.Lines.Line import Line
 from Palette.Properties import FieldProperty, LengthProperty
 from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.common.keys import Keys
 from selenium import webdriver
 
 
@@ -16,6 +17,7 @@ class Hole:
         Hole.count_holes += 1
         Hole.count_Ids += 1
         self.id = Hole.count_Ids
+        self.number = Hole.count_holes
         self.parent = parent
         self.name = name
         self.offset1 = offset1
@@ -44,14 +46,14 @@ class Hole:
         offset2 = LengthProperty("offset2",f"{SideBarList.PROPERTIES.value} > {SideBarList.PROPERTIES_BODY.value} > {HoleSelectorList.OFFSET2.value}",self.offset2).set_property(driver)
         width = LengthProperty("width",f"{SideBarList.PROPERTIES.value} > {SideBarList.PROPERTIES_BODY.value} > {HoleSelectorList.WIDTH.value}",self.width).set_property(driver)
         height = LengthProperty("height",HoleSelectorList.HEIGHT.value,self.height).set_property(driver)
-        altitude = LengthProperty("altitude",HoleSelectorList.WIDTH.value,self.altitude).set_property(driver)
+        altitude = LengthProperty("altitude",HoleSelectorList.ALTITUDE.value,self.altitude).set_property(driver)
         thickness = LengthProperty("thickness",HoleSelectorList.THICKNESS.value,self.thickness).set_property(driver)
 
     def insert_hole_on_layer(self, driver: webdriver.Firefox) -> None:
         if Line.count_lines == 0:
             return
         else:
-            ActionChains(driver).move_to_element(driver.find_element_by_css_selector(f"#svg-drawing-paper > g:nth-child(1) > g:nth-child(3) > g:nth-child({self.parent.number})")).click().perform()     
+            ActionChains(driver).move_to_element(driver.find_element_by_css_selector(f"#svg-drawing-paper > g:nth-child(1) > g:nth-child(3) > g:nth-child({self.parent.number})")).click().send_keys(Keys.ESCAPE).perform()     
 
     @staticmethod
     def add_hole(driver, link) -> None:

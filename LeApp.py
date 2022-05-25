@@ -26,15 +26,18 @@ def lines():
     wall1.place_line(driver)
 
     wall2 = Wall("Wall 2",100,1000,800,1000,{'length': 700, 'unit': 'cm'}, height={"length":999,"unit":"cm"}, thickness={"length":50,"unit":"cm"}, textureA="Painted")
-    #wall2.place_line(driver)   
+    wall2.place_line(driver)   
 
 
 def holes():
     wall = Wall("Line 1",300,1700,1000,1700,{'length': 700, 'unit': 'cm'}, height={"length":999,"unit":"cm"}, thickness={"length":50,"unit":"cm"}, textureA="Painted")
     wall.place_line(driver)
 
-    gate = Gate(wall,"gate1",{'length': 10, 'unit': 'cm'},{'length': 0, 'unit': 'cm'})
-    gate.place_hole(driver)
+    gate1 = Gate(wall,"Gate_1",{'length': 10, 'unit': 'cm'},{'length': 0, 'unit': 'cm'})
+    gate1.place_hole(driver)
+
+    gate2 = Gate(wall, "Gate2", {"length":220, "unit":"cm"}, {"length":400, "unit":"cm"})
+    gate2.place_hole(driver)
 
 
 def load():
@@ -44,8 +47,8 @@ def load():
 
 
 if __name__ == "__main__":
-    #holes()
-    lines()
+    holes()
+    #lines()
     #items()
     #load()
     
