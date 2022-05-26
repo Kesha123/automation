@@ -53,9 +53,11 @@ class Line:
 
     @staticmethod
     def insert_line_on_layer(driver: webdriver.Firefox) -> None:
-        element = driver.find_element_by_css_selector(Layer().link)
-        element.click()
-        ActionChains(driver).move_by_offset(100,100).click().send_keys(Keys.ESCAPE).perform()        
+        Logger.warning("Line inserting SHOULD me implemented in another way due to harcoding!!! \n\t ***Reminder for me")
+        cell1 = driver.find_element_by_css_selector("#svg-drawing-paper > g:nth-child(1) > g:nth-child(1) > g:nth-child(2) > line:nth-child(2)")
+        cell2 = driver.find_element_by_css_selector("#svg-drawing-paper > g:nth-child(1) > g:nth-child(1) > g:nth-child(2) > line:nth-child(4)")
+        cell1.click()
+        ActionChains(driver).move_to_element(cell2).click().send_keys(Keys.ESCAPE).perform()
 
     @staticmethod
     def add_line(driver, link) -> None:

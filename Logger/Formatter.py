@@ -8,6 +8,7 @@ class CustomFormatter(logging.Formatter):
     bold_red = '\x1b[31;1m'
     reset = '\x1b[0m'
     green = '\u001b[32;226m'
+    purple = '\e[0;35m'
 
     def __init__(self, fmt):
         super().__init__()

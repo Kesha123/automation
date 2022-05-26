@@ -47,6 +47,7 @@ class ToolBar:
                 PATH = os.path.expanduser("~")
                 try:
                     os.replace(f"{PATH}/{download}/{project_name}.json", f"{path}/{project_name}.json")
+                    Logger.debug(f"Project saved successfully in {path}/{project_name}.json")
                 except FileNotFoundError as ex:
                     Logger.error(f"Error occured while saving the file:\n\t{ex}")
             case "Windows":
@@ -60,4 +61,4 @@ class ToolBar:
 
     @staticmethod
     def load_project(driver, parser) -> None:
-        pass
+        Logger.warning("Project uploading is not implemented")

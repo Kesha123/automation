@@ -2,6 +2,7 @@ import json
 import math
 from Catalog.Items.Bench import Bench
 from Catalog.Lines.Wall import Wall
+from Catalog.Holes.Gate import Gate
 from Logger.Logger import Logger
 
 
@@ -10,8 +11,8 @@ class Parser:
     def __init__(self, project_path: str) -> None:
         self.name = project_path
         self.layers = {}
-        self.holes = []
-        self.vertices = []
+        #self.holes = []
+        #self.vertices = []
         self.set_layers()
 
     def parse_project(self):
@@ -62,18 +63,19 @@ class Parser:
     def get_lines(self):
         self.get_vertices()
         for layer in self.get_layers().items():
-            lines = []
+            lines = {}
             layer_name = layer[0]
             layer_lines = list(layer[1].get("lines").items())
 
             for line in layer_lines:
+                line_id = line[1].get("id")
                 name = line[1].get("name")
                 line_vertices = [vert for vert in line[1].get("vertices")]
                 x1 = self.layers[layer_name]["vertices"].get(line_vertices[0]).get("x")
                 y1 = self.layers[layer_name]["vertices"].get(line_vertices[0]).get("y")
                 x2 = self.layers[layer_name]["vertices"].get(line_vertices[1]).get("x")
                 y2 = self.layers[layer_name]["vertices"].get(line_vertices[1]).get("y")
-                length = math.sqrt( (x1 - x2)**2 + (y1 - y2)**2 )
+                #length = math.sqrt( (x1 - x2)**2 + (y1 - y2)**2 )
                 height = {"length": line[1].get("properties").get("height").get("length"), "unit":"cm"}
                 thickness = {"length": line[1].get("properties").get("thickness").get("length"), "unit":"cm"}
                 
@@ -81,19 +83,44 @@ class Parser:
                     case "wall":
                         textureA = line[1].get("properties").get("textureA")
                         textureB = line[1].get("properties").get("textureB")
-                        wall = Wall(name,x1,y1,x2,y2,length,height=height,thickness=thickness,textureA=textureA,textureB=textureB)
-                        lines.append(wall)
+                        wall = Wall(name,x1,y1,x2,y2,height=height,thickness=thickness,textureA=textureA,textureB=textureB)
+                        #lines.append({line_id:wall})
+                        lines.update({line_id:wall})
             
             self.layers[layer_name]["lines"] = lines
 
     def get_holes(self):
-        pass
+        for layer in self.get_layers().items():
+            holes = []
+            layer_name = layer[0]
+            layer_holes = list(layer[1].get("holes").items())
 
-    def load_project(self):
+            for hole in layer_holes:
+                parent = self.layers[layer_name]["lines"].get(hole[1].get("line"))
+                name = hole[1].get("name")
+                width = {"length":hole[1].get("properties").get("width").get("length"), "unit":"cm"}
+                height = {"length":hole[1].get("properties").get("height").get("length"), "unit":"cm"}
+                altitude = {"length":hole[1].get("properties").get("altitude").get("length"), "unit":"cm"}
+                thickness = {"length":hole[1].get("properties").get("thickness").get("length"), "unit":"cm"}
+
+                offsetB = {"length":parent.length.get("length")*hole[1].get("offset") + float(width["length"]), "unit":"cm"}
+                offsetA = {"length":parent.length.get("length") - hole[1].get("offset") - offsetB.get("length"), "unit":"cm"}
+
+                match hole[1].get("type"):
+                    case "gate":
+                        gate = Gate(parent,name,offsetA,offsetB,width,height,altitude,thickness)
+                        holes.append(gate)
+
+            self.layers[layer_name]["holes"] = holes
+
+
+    def load_project(self) -> None:
         self.get_items()
         Logger.info("Items got successfully")
         self.get_lines()
         Logger.info("Lines got successfully")
         self.get_holes()
         Logger.info("Holes got successfully")
-        return self.layers
+
+    def __str__(self) -> str:
+        return str(self.layers)
