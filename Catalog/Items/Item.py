@@ -3,7 +3,6 @@ from enum import Enum
 from Palette.Layer import Layer
 from Palette.SideBar import SideBar, SideBarList
 from Palette.Properties import FieldProperty, SubbmitProperty
-from Catalog.Counter import Counter
 from Logger.Logger import Logger
 
 class Item:
@@ -14,7 +13,6 @@ class Item:
         Logger.info(f"{type(self)} object has been cteated")
         Item.count_items += 1
         Item.count_Ids += 1
-        Counter.count += 1
         self.id = Item.count_Ids
         self.number = Item.count_items
         self.x = x
@@ -52,6 +50,9 @@ class Item:
     def add_object(driver, link) -> None:
         object = driver.find_element_by_css_selector(link)
         object.click()
+
+    def __str__(self) -> str:
+        return str({"name":self.name,"x":self.x,"y":self.y,"rotation":self.rotation})
 
 
 class ItemSelectorList(Enum):

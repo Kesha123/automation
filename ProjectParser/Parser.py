@@ -1,5 +1,8 @@
 import json
+import math
 from Catalog.Items.Bench import Bench
+from Catalog.Lines.Wall import Wall
+from Logger.Logger import Logger
 
 
 class Parser:
@@ -8,7 +11,7 @@ class Parser:
         self.name = project_path
         self.layers = {}
         self.holes = []
-        self.lines = []
+        self.vertices = []
         self.set_layers()
 
     def parse_project(self):
@@ -19,7 +22,7 @@ class Parser:
 
     def set_layers(self):
         for layer in dict(self.parse_project()["layers"]).keys():
-            self.layers.update({layer : {"lines" : None, "holes" : None, "items" : None}})
+            self.layers.update({layer : {"lines" : None, "holes" : None, "items" : None, "vertices": None}})
 
     def get_layers(self):
         return self.parse_project()["layers"]
@@ -45,22 +48,52 @@ class Parser:
             
             self.layers[layer_name]["items"] = items
 
+    def get_vertices(self):
+        for layer in self.get_layers().items():
+            vertices = {}
+            layer_name = layer[0]
+            layer_vertices = list(layer[1].get("vertices").items())
+
+            for vertex in layer_vertices:
+                vertices.update({vertex[0]: {"x":vertex[1].get("x"), "y":vertex[1].get("y")}})
+            
+            self.layers[layer_name]["vertices"] = vertices
 
     def get_lines(self):
+        self.get_vertices()
         for layer in self.get_layers().items():
             lines = []
             layer_name = layer[0]
             layer_lines = list(layer[1].get("lines").items())
-            layer_vertices = list(layer[1].get("vertices").items())
 
             for line in layer_lines:
-                vertices = line.get("vertices")
+                name = line[1].get("name")
+                line_vertices = [vert for vert in line[1].get("vertices")]
+                x1 = self.layers[layer_name]["vertices"].get(line_vertices[0]).get("x")
+                y1 = self.layers[layer_name]["vertices"].get(line_vertices[0]).get("y")
+                x2 = self.layers[layer_name]["vertices"].get(line_vertices[1]).get("x")
+                y2 = self.layers[layer_name]["vertices"].get(line_vertices[1]).get("y")
+                length = math.sqrt( (x1 - x2)**2 + (y1 - y2)**2 )
+                height = {"length": line[1].get("properties").get("height").get("length"), "unit":"cm"}
+                thickness = {"length": line[1].get("properties").get("thickness").get("length"), "unit":"cm"}
+                
+                match line[1].get("type"):
+                    case "wall":
+                        textureA = line[1].get("properties").get("textureA")
+                        textureB = line[1].get("properties").get("textureB")
+                        wall = Wall(name,x1,y1,x2,y2,length,height=height,thickness=thickness,textureA=textureA,textureB=textureB)
+                        lines.append(wall)
+            
+            self.layers[layer_name]["lines"] = lines
 
     def get_holes(self):
         pass
 
     def load_project(self):
         self.get_items()
+        Logger.info("Items got successfully")
         self.get_lines()
+        Logger.info("Lines got successfully")
         self.get_holes()
+        Logger.info("Holes got successfully")
         return self.layers

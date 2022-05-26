@@ -7,7 +7,6 @@ from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
 from selenium import webdriver
 
-from Catalog.Counter import Counter
 
 from Logger.Logger import Logger
 
@@ -20,7 +19,6 @@ class Line:
         Logger.info(f"{type(self)} object has been cteated")
         Line.count_lines += 1
         Line.count_Ids += 1
-        Counter.count += 1
         self.id = Line.count_Ids
         self.number = Line.count_lines
         self.name = name
@@ -62,6 +60,9 @@ class Line:
     def add_line(driver, link) -> None:
         object = driver.find_element_by_css_selector(link)
         object.click()
+
+    def __str__(self) -> str:
+        return str({"name":self.name,"x1":self.x1,"y1":self.y1,"x2":self.x2,"y2":self.y2,"length":self.length})
 
 
 class LineSelectorList(Enum):

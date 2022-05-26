@@ -8,7 +8,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium import webdriver
 
 from Logger.Logger import Logger
-from Catalog.Counter import Counter
+
 
 class Hole:
     count_holes: int = 0
@@ -19,7 +19,6 @@ class Hole:
         Logger.info(f"{type(self)} object has been cteated")
         Hole.count_holes += 1
         Hole.count_Ids += 1
-        Counter.count += 1
         self.id = Hole.count_Ids
         self.number = Hole.count_holes
         self.parent = parent

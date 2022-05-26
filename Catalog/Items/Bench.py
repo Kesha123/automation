@@ -5,7 +5,6 @@ from Catalog.Items.Item import Item
 from Catalog.Lines.Line import Line
 from Palette.Properties import LengthProperty
 
-from Catalog.Counter import Counter
 
 class Bench(Item):
 
@@ -27,4 +26,4 @@ class Bench(Item):
         Logger.info(f"{self.name} is \033[1mready\033[0m")
 
     def __str__(self) -> str:
-        return str(dict([("X", self.x), ("Y", self.y), ("Rotation", self.rotation), ("Id", self.id), self.extra_properties]))
+        return super().__str__() + str(self.extra_properties)

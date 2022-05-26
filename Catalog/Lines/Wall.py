@@ -4,7 +4,6 @@ from Catalog.Lines.Line import Line
 from Catalog.Items.Item import Item
 from Palette.Properties import LengthProperty, SelectProperty
 
-from Catalog.Counter import Counter
 from Logger.Logger import Logger
 
 class Wall(Line):
@@ -33,6 +32,9 @@ class Wall(Line):
         super().place_line(driver)
         self.set_properties(driver)
         Logger.info(f"{self.name} is \033[1mready\033[0m")
+
+    def __str__(self) -> str:
+        return super().__str__() + str(self.extra_properties)
 
 
 class ExtraProperties(Enum):
