@@ -1,4 +1,5 @@
 from enum import Enum
+import math
 from Palette.SideBar import SideBar, SideBarList
 from Palette.ToolBar import ToolBar, ToolBarList
 from Palette.Layer import Layer
@@ -15,7 +16,7 @@ class Line:
     count_lines: int = 0
     count_Ids: int = 1
 
-    def __init__(self, name: str, x1: float, y1: float, x2: float, y2: float, length: dict) -> None:
+    def __init__(self, name: str, x1: float, y1: float, x2: float, y2: float) -> None:
         Logger.info(f"{type(self)} object has been cteated")
         Line.count_lines += 1
         Line.count_Ids += 1
@@ -26,7 +27,7 @@ class Line:
         self.y1 = y1
         self.x2 = x2
         self.y2 = y2
-        self.length = length
+        self.length = {"length":math.sqrt( (x1 - x2)**2 + (y1 - y2)**2 ), "unit":"cm"}
         self.link = ""
 
     def self_choose(self, driver):

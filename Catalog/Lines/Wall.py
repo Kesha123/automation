@@ -7,8 +7,8 @@ from Palette.Properties import LengthProperty, SelectProperty
 from Logger.Logger import Logger
 
 class Wall(Line):
-    def __init__(self, name: str, x1: float, y1: float, x2: float, y2: float, length: dict, **kwargs) -> None:
-        super().__init__(name, x1, y1, x2, y2, length)
+    def __init__(self, name: str, x1: float, y1: float, x2: float, y2: float, **kwargs) -> None:
+        super().__init__(name, x1, y1, x2, y2)
         self.extra_properties = kwargs
         self.link = f"{Catalogue.CATALOG.value} > {Catalogue.WALL.value}" if ((Item.count_items + Line.count_lines == 1)) else f"{Catalogue.CATALOG_ALTER.value} > {Catalogue.WALL.value}"
 

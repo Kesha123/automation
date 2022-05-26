@@ -10,7 +10,7 @@ from Catalog.Holes.Gate import Gate
 
 
 driver = webdriver.Firefox()
-#driver.get("https://ainak.gitlab.io/leapp-app/") 
+driver.get("https://ainak.gitlab.io/leapp-app/") 
  
 
 def items():
@@ -23,10 +23,10 @@ def items():
 
 
 def lines():
-    #wall1 = Wall("Wall 1",300,1700,1000,1700,{'length':700,'unit':'cm'}, height={"length":999,"unit":"cm"}, thickness={"length":50,"unit":"cm"}, textureA="Painted")
-    #wall1.place_line(driver)
+    wall1 = Wall("Wall 1",300,1700,1000,1700, height={"length":999,"unit":"cm"}, thickness={"length":50,"unit":"cm"}, textureA="Painted")
+    wall1.place_line(driver)
 
-    wall2 = Wall("Wall 2",100,1000,800,1000,{'length': 700, 'unit': 'cm'}, height={"length":999,"unit":"cm"}, thickness={"length":50,"unit":"cm"}, textureA="Painted")
+    wall2 = Wall("Wall 2",100,1000,800,1000, height={"length":999,"unit":"cm"}, thickness={"length":50,"unit":"cm"}, textureA="Painted")
     wall2.place_line(driver)   
 
 
@@ -50,8 +50,8 @@ def load():
 if __name__ == "__main__":
     #items()
     #holes()
-    #lines()
+    lines()
     
-    load()
+    #load()
     #ToolBar.save_project(driver)
     
