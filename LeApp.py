@@ -1,5 +1,6 @@
 from Logger.Logger import Logger
 from Palette.ToolBar import ToolBar
+from Palette.SideBar import SideBar
 from Catalog.Items.Bench import Bench
 from selenium import webdriver
 
@@ -10,7 +11,7 @@ from Catalog.Holes.Gate import Gate
 
 
 driver = webdriver.Firefox()
-#driver.get("https://ainak.gitlab.io/leapp-app/") 
+driver.get("https://ainak.gitlab.io/leapp-app/") 
  
 
 def items():
@@ -55,5 +56,7 @@ if __name__ == "__main__":
 
     #ToolBar.save_project(driver)
 
-    load()
-    
+    #load()
+    SideBar.add_layer(driver,name="test",opacity=33,height=10,order=2)
+    SideBar.add_layer(driver,name="layer 3",opacity=45.5,height=10,order=2)
+    pass

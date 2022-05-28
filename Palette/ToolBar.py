@@ -1,7 +1,6 @@
 import os
 import platform
 from enum import Enum
-from posixpath import split
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.common.exceptions import TimeoutException

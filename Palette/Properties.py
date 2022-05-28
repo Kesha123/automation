@@ -13,8 +13,8 @@ class Property:
 
 
 class FieldProperty(Property):
-    def __init__(self, name: str, link: str, property) -> None:
-        super().__init__(name, link, property)
+    def __init__(self, name: str, input_field_link: str, property) -> None:
+        super().__init__(name, input_field_link, property)
 
     def set_property(self, driver: webdriver.Firefox) -> None:
         field = driver.find_element_by_css_selector(self.link)
