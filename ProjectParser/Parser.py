@@ -1,5 +1,4 @@
 import json
-import math
 from Catalog.Items.Bench import Bench
 from Catalog.Lines.Wall import Wall
 from Catalog.Holes.Gate import Gate
@@ -83,8 +82,8 @@ class Parser:
                 
                 match line[1].get("type"):
                     case "wall":
-                        textureA = line[1].get("properties").get("textureA")
-                        textureB = line[1].get("properties").get("textureB")
+                        textureA = line[1].get("properties").get("textureA").capitalize()
+                        textureB = line[1].get("properties").get("textureB").capitalize()
                         wall = Wall(name,x1,y1,x2,y2,height=height,thickness=thickness,textureA=textureA,textureB=textureB)
                         lines.update({line_id:wall})
             

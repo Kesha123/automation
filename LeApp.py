@@ -46,7 +46,6 @@ def load():
     parser = Parser("Project1.json")
     parser.load_project()
     ToolBar.load_project(driver, parser)
-    Logger.info(parser)
 
 
 if __name__ == "__main__":

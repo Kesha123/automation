@@ -6,6 +6,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.common.exceptions import TimeoutException
 
 from Logger.Logger import Logger
+from Palette.SideBar import SideBar
 
 
 class ToolBarList(Enum):
@@ -59,5 +60,17 @@ class ToolBar:
                 Logger.warning("can not decet your os!")
 
     @staticmethod
-    def load_project(driver, parser) -> None:
-        Logger.warning("Project uploading is not implemented")
+    def load_project(driver, parser) -> None:        
+        for layer in parser.layers.items():
+            SideBar.add_layer(driver,**layer[1].get("properties"))
+
+            for line in layer[1].get("lines").items():
+                line[1].place_line(driver)
+
+            for hole in layer[1].get("holes"):
+                hole.place_hole(driver)
+
+            for item in layer[1].get("items"):
+                item.place_item(driver)
+
+            Logger.debug(f"Layer {layer[0]} is ready with:\n\n\t\t{len(layer[1]['lines'].items())} - lines;\n\t\t{len(layer[1]['holes'])} - holes;\n\t\t{len(layer[1]['items'])} - items;")
