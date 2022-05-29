@@ -56,7 +56,7 @@ if __name__ == "__main__":
 
     #ToolBar.save_project(driver)
 
-    #load()
-    SideBar.add_layer(driver,name="test",opacity=33,height=10,order=2)
-    SideBar.add_layer(driver,name="layer 3",opacity=45.5,height=10,order=2)
+    load()
+    #SideBar.add_layer(driver,name="test",opacity=33,height=10,order=2)
+    #SideBar.add_layer(driver,name="layer 3",opacity=45.5,altitude=10,order=2)
     pass

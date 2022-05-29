@@ -55,8 +55,8 @@ class SideBar:
             name = FieldProperty("name",f"{SideBarList.LAYERS.value} > {SideBarList.LAYER_PROPERTY_BODY.value} > {LayerList.NAME.value}",kwargs.get("name")).set_property(driver)
         if kwargs.get("opacity"):
             opacity = FieldProperty("opacity",f"{SideBarList.LAYERS.value} > {SideBarList.LAYER_PROPERTY_BODY.value} > {LayerList.OPACITY.value}",int(kwargs.get("opacity"))).set_property(driver)
-        if kwargs.get("height"):
-            height = SubbmitProperty("height",f"{SideBarList.LAYERS.value} > {SideBarList.LAYER_PROPERTY_BODY.value} > {LayerList.HEIGHT.value}",kwargs.get("height")).set_property(driver)
+        if kwargs.get("altitude"):
+            altitude = SubbmitProperty("altitude",f"{SideBarList.LAYERS.value} > {SideBarList.LAYER_PROPERTY_BODY.value} > {LayerList.HEIGHT.value}",kwargs.get("altitude")).set_property(driver)
         if kwargs.get("order"):
             order = SubbmitProperty("order",f"{SideBarList.LAYERS.value} > {SideBarList.LAYER_PROPERTY_BODY.value} > {LayerList.ORDER.value}",kwargs.get("order")).set_property(driver)
 

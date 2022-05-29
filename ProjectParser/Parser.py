@@ -11,8 +11,6 @@ class Parser:
     def __init__(self, project_path: str) -> None:
         self.name = project_path
         self.layers = {}
-        #self.holes = []
-        #self.vertices = []
         self.set_layers()
 
     def parse_project(self):
@@ -23,10 +21,15 @@ class Parser:
 
     def set_layers(self):
         for layer in dict(self.parse_project()["layers"]).keys():
-            self.layers.update({layer : {"lines" : None, "holes" : None, "items" : None, "vertices": None}})
+            self.layers.update({layer : {"properties": None, "lines" : None, "holes" : None, "items" : None, "vertices": None}})
 
     def get_layers(self):
         return self.parse_project()["layers"]
+
+    def get_properties(self):
+        for layer in self.get_layers().items():
+            layer_name = layer[0]
+            self.layers[layer_name]["properties"] = {"name": layer[1].get("name"), "opacity": layer[1].get("opacity"), "altitude": layer[1].get("altitude"), "order": layer[1].get("order")}
 
     def get_items(self):
         for layer in self.get_layers().items():
@@ -75,7 +78,6 @@ class Parser:
                 y1 = self.layers[layer_name]["vertices"].get(line_vertices[0]).get("y")
                 x2 = self.layers[layer_name]["vertices"].get(line_vertices[1]).get("x")
                 y2 = self.layers[layer_name]["vertices"].get(line_vertices[1]).get("y")
-                #length = math.sqrt( (x1 - x2)**2 + (y1 - y2)**2 )
                 height = {"length": line[1].get("properties").get("height").get("length"), "unit":"cm"}
                 thickness = {"length": line[1].get("properties").get("thickness").get("length"), "unit":"cm"}
                 
@@ -84,7 +86,6 @@ class Parser:
                         textureA = line[1].get("properties").get("textureA")
                         textureB = line[1].get("properties").get("textureB")
                         wall = Wall(name,x1,y1,x2,y2,height=height,thickness=thickness,textureA=textureA,textureB=textureB)
-                        #lines.append({line_id:wall})
                         lines.update({line_id:wall})
             
             self.layers[layer_name]["lines"] = lines
@@ -115,6 +116,8 @@ class Parser:
 
 
     def load_project(self) -> None:
+        self.get_properties()
+        Logger.info("Set properties successfully")
         self.get_items()
         Logger.info("Items got successfully")
         self.get_lines()
