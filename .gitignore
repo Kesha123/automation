@@ -8,5 +8,4 @@ geckodriver.log
 *.cfg
 *.json
 Pipfile
-SupportScripts
 *.log

@@ -13,10 +13,15 @@ class Parser:
         self.set_layers()
 
     def parse_project(self):
-        with open(self.name, "r") as project:
-            json_string = json.loads(project.read())
-            project.close()
-        return json_string
+        try:
+            with open(self.name, "r") as project:
+                json_string = json.loads(project.read())
+                project.close()
+            return json_string
+        except TypeError:
+            Logger.error("File type error")
+        except FileNotFoundError:
+            Logger.error("No such file")
 
     def set_layers(self):
         for layer in dict(self.parse_project()["layers"]).keys():
