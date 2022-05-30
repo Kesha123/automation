@@ -9,7 +9,23 @@
 
 ## **Install**
 ### **Linux**
-> Linux
+ Install install.sh file from releases.
+ ```
+ sh install.sh
+ cd automation
+ source bin/activate
+ ```
+### **Windows**
+> Windows
+### **MacOS**
+> MacOS
+
+## **Use**
+### **Linux**
+ ```
+ python3 LeApp.py [flag] [option]
+ python3 LeApp.py -h
+ ```
 ### **Windows**
 > Windows
 ### **MacOS**
