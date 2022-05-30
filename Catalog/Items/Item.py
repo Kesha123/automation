@@ -32,8 +32,7 @@ class Item:
         x = SubbmitProperty("x",f"{SideBarList.PROPERTIES.value} > {SideBarList.ITEM_MAIN_PROPERTIES_BODY.value} > {ItemSelectorList.X.value}",self.x).set_property(driver)
         y = SubbmitProperty("y",f"{SideBarList.PROPERTIES.value} > {SideBarList.ITEM_MAIN_PROPERTIES_BODY.value} > {ItemSelectorList.Y.value}",self.y).set_property(driver)
         rotation = SubbmitProperty("rotation",f"{SideBarList.PROPERTIES.value} > {SideBarList.ITEM_MAIN_PROPERTIES_BODY.value} > {ItemSelectorList.ROTATION.value}",self.rotation).set_property(driver)
-
-        Logger.info(f"Main properties for {type(self)} object with \033[1m{self.name}\033[0m name were set")
+        Logger.info(f"Main properties were set for \033[1m{self.name}\033[0m")
 
     def place_item(self, driver):
         ToolBar.open_catalog(driver)

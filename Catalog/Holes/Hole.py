@@ -51,7 +51,7 @@ class Hole:
         height = LengthProperty("height",HoleSelectorList.HEIGHT.value,self.height).set_property(driver)
         altitude = LengthProperty("altitude",HoleSelectorList.ALTITUDE.value,self.altitude).set_property(driver)
         thickness = LengthProperty("thickness",HoleSelectorList.THICKNESS.value,self.thickness).set_property(driver)
-        Logger.info(f"Main properties for {type(self)} object with \033[1m{self.name}\033[0m name were set")
+        Logger.info(f"Main properties were set for \033[1m{self.name}\033[0m")
 
     def insert_hole_on_layer(self, driver: webdriver.Firefox) -> None:
         if Line.count_lines == 0:
