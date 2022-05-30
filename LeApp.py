@@ -24,7 +24,8 @@ def main():
         if ('-h') in option:
             Logger.info("You are usnig LeApp.\n\n\t -f <filename>.json - to load project from the file. \n\t -i - interactive mode. \n\t -e - to run examples.\n")
         if ('-f') in option:
-            driver.get("https://ainak.gitlab.io/leapp-app/") 
+            driver.get("https://ainak.gitlab.io/leapp-app/")
+            ToolBar.save_project(driver)
             parser = Parser(argument)
             parser.load_project()
             ToolBar.load_project(driver, parser)

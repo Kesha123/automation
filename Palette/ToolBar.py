@@ -5,6 +5,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.common.exceptions import TimeoutException
 
+import configparser
+
 from Logger.Logger import Logger
 from Palette.SideBar import SideBar
 
@@ -40,7 +42,9 @@ class ToolBar:
         except TimeoutException:
             pass
 
-        download = "Загрузки"
+        config = configparser.ConfigParser()
+        config.read("config.env")
+        download = config.get("DOWNLOAD","DOWNLOAD_DIR")
 
         match platform.system():
             case "Linux":
@@ -49,7 +53,7 @@ class ToolBar:
                     os.replace(f"{PATH}/{download}/{project_name}.json", f"{path}/{project_name}.json")
                     Logger.debug(f"Project saved successfully in {path}/{project_name}.json")
                 except FileNotFoundError as ex:
-                    Logger.error(f"Error occured while saving the file:\n\t{ex}")
+                    Logger.error(f"Error occured while saving the file:\n\t{ex}. \n\n You can try to change the download directory in config.env.")
             case "Windows":
                 Logger.warning(f"Saving on {platform.system()} pcs hasn't been implemented so far due to ...")
                 pass 
