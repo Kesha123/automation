@@ -61,7 +61,7 @@ class ToolBar:
                 Logger.warning(f"Saving on {platform.system()} pcs hasn't been implemented so far due to ...")
                 pass
             case _:
-                Logger.warning("can not decet your os!")
+                Logger.warning("Can not detect your os!")
 
     @staticmethod
     def load_project(driver, parser) -> None:        

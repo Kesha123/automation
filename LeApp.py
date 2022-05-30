@@ -18,12 +18,12 @@ def main():
         Logger.error(f"You provided unsupportde option:\n\t{ex.msg}")
         return
 
-    driver = webdriver.Firefox()
 
     for option, argument in opts:
         if ('-h') in option:
             Logger.info("You are usnig LeApp.\n\n\t -f <filename>.json - to load project from the file. \n\t -i - interactive mode. \n\t -e - to run examples.\n")
         if ('-f') in option:
+            driver = webdriver.Firefox()
             driver.get("https://ainak.gitlab.io/leapp-app/")
             ToolBar.save_project(driver)
             parser = Parser(argument)
@@ -35,6 +35,7 @@ def main():
             sys.exit(0)
         if ("-e") in option:
             from SupportScripts.Examples import Example
+            driver = webdriver.Firefox()
             driver.get("https://ainak.gitlab.io/leapp-app/") 
             Example.run(driver)
             sys.exit(0)

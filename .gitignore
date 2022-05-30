@@ -4,8 +4,8 @@ include/
 lib
 lib64
 geckodriver
-geckodriver.log
 *.cfg
 *.json
 Pipfile
 *.log
+*.env
