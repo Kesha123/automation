@@ -7,33 +7,51 @@ from Logger.Logger import Logger
 
 class Parser:
 
-    def __init__(self, project_path: str) -> None:
-        self.name = project_path
+    def __init__(self, **kwargs) -> None:
+        self.data = kwargs
+        self.project = None
         self.layers = {}
         self.set_layers()
 
     def parse_project(self):
-        try:
-            with open(self.name, "r") as project:
-                json_string = json.loads(project.read())
-                project.close()
-            return json_string
-        except TypeError:
-            Logger.error("File type error")
-        except FileNotFoundError:
-            Logger.error("No such file")
+        if self.data.get('project_path'):
+            try:
+                with open(self.data.get('project_path'), "r") as project:
+                    json_string = json.loads(project.read())
+                    project.close()
+                    self.project = json_string
+            except TypeError:
+                Logger.error("File type error")
+            except FileNotFoundError:
+                Logger.error("No such file")
+        elif self.data.get('file'):
+            self.project = self.data.get('file')
+        else:
+            raise Exception('Please instantinate with a valid path, or file object')        
 
     def set_layers(self):
-        for layer in dict(self.parse_project()["layers"]).keys():
+        self.parse_project()
+        for layer in dict(self.project["layers"]).keys():
             self.layers.update({layer : {"properties": None, "lines" : None, "holes" : None, "items" : None, "vertices": None}})
 
     def get_layers(self):
-        return self.parse_project()["layers"]
+        return self.project["layers"]
 
     def get_properties(self):
         for layer in self.get_layers().items():
             layer_name = layer[0]
             self.layers[layer_name]["properties"] = {"name": layer[1].get("name"), "opacity": layer[1].get("opacity"), "altitude": layer[1].get("altitude"), "order": layer[1].get("order")}
+    
+    def get_vertices(self):
+        for layer in self.get_layers().items():
+            vertices = {}
+            layer_name = layer[0]
+            layer_vertices = list(layer[1].get("vertices").items())
+
+            for vertex in layer_vertices:
+                vertices.update({vertex[0]: {"x":vertex[1].get("x"), "y":vertex[1].get("y")}})
+            
+            self.layers[layer_name]["vertices"] = vertices
 
     def get_items(self):
         for layer in self.get_layers().items():
@@ -41,7 +59,7 @@ class Parser:
             layer_name = layer[0]
             layer_items = list(layer[1].get("items").items())
 
-            for index, item in enumerate(layer_items):
+            for item in layer_items:
                 properties = item[1].get("properties")
                 name = item[1].get("name")
                 altitude = properties.get("altitude")
@@ -55,17 +73,6 @@ class Parser:
                         items.append(bench)
             
             self.layers[layer_name]["items"] = items
-
-    def get_vertices(self):
-        for layer in self.get_layers().items():
-            vertices = {}
-            layer_name = layer[0]
-            layer_vertices = list(layer[1].get("vertices").items())
-
-            for vertex in layer_vertices:
-                vertices.update({vertex[0]: {"x":vertex[1].get("x"), "y":vertex[1].get("y")}})
-            
-            self.layers[layer_name]["vertices"] = vertices
 
     def get_lines(self):
         self.get_vertices()

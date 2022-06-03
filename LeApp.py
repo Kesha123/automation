@@ -6,7 +6,12 @@ from selenium import webdriver
 from ProjectParser.Parser import Parser
 
 
-def main():    
+def main():
+
+    if len(sys.argv) == 1:
+        Logger.error(f"Run with '-h' option to see the possible options!")
+        sys.exit(0)
+
     arguments = sys.argv.copy()
     for index, arg in enumerate(sys.argv):
         if arg == '-h' or arg == '-e' or arg == '-i':
@@ -17,7 +22,6 @@ def main():
     except getopt.GetoptError as ex:
         Logger.error(f"You provided unsupportde option:\n\t{ex.msg}")
         return
-
 
     for option, argument in opts:
         if ('-h') in option:
